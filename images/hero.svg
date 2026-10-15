@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<defs>
+  <!-- BACKGROUND -->
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#07070e"/>
+    <stop offset="55%" stop-color="#0b1018"/>
+    <stop offset="100%" stop-color="#160700"/>
+  </linearGradient>
+  <!-- FORGE GLOW warm lower-left -->
+  <radialGradient id="fg" cx="22%" cy="90%" r="58%">
+    <stop offset="0%" stop-color="#ff5500" stop-opacity="0.50"/>
+    <stop offset="40%" stop-color="#cc2800" stop-opacity="0.20"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <!-- CRIMSON ATMOSPHERE upper center -->
+  <radialGradient id="ca" cx="50%" cy="30%" r="48%">
+    <stop offset="0%" stop-color="#880010" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <!-- BRONZE WARM (forge-lit left face) -->
+  <linearGradient id="bw" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#ff9940"/>
+    <stop offset="35%" stop-color="#c07828"/>
+    <stop offset="100%" stop-color="#562808"/>
+  </linearGradient>
+  <!-- BRONZE NEUTRAL -->
+  <linearGradient id="bn" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#e0b050"/>
+    <stop offset="55%" stop-color="#b07030"/>
+    <stop offset="100%" stop-color="#643810"/>
+  </linearGradient>
+  <!-- BRONZE PLATE vertical -->
+  <linearGradient id="bp" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#d89840"/>
+    <stop offset="50%" stop-color="#a06828"/>
+    <stop offset="100%" stop-color="#583010"/>
+  </linearGradient>
+  <!-- STEEL BLADE -->
+  <linearGradient id="sb" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#b0b8c4"/>
+    <stop offset="28%" stop-color="#e4e8f0"/>
+    <stop offset="65%" stop-color="#9098a8"/>
+    <stop offset="100%" stop-color="#283038"/>
+  </linearGradient>
+  <!-- SKIN FORGE-LIT left warm right cool -->
+  <linearGradient id="sk" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#e09858"/>
+    <stop offset="50%" stop-color="#c07840"/>
+    <stop offset="100%" stop-color="#784020"/>
+  </linearGradient>
+  <!-- APRON linen -->
+  <linearGradient id="ap" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#eeebe2"/>
+    <stop offset="60%" stop-color="#d0cbc0"/>
+    <stop offset="100%" stop-color="#b0a898"/>
+  </linearGradient>
+  <!-- HAIR dark auburn -->
+  <linearGradient id="hr" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6a3808"/>
+    <stop offset="100%" stop-color="#1c0a02"/>
+  </linearGradient>
+  <!-- STONE PILLAR -->
+  <linearGradient id="st" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#1c1c2a"/>
+    <stop offset="100%" stop-color="#0a0a14"/>
+  </linearGradient>
+  <!-- FLASK INTERIOR emerald glow -->
+  <radialGradient id="fi" cx="38%" cy="40%" r="65%">
+    <stop offset="0%" stop-color="#aaffcc"/>
+    <stop offset="45%" stop-color="#00cc66"/>
+    <stop offset="100%" stop-color="#003320"/>
+  </radialGradient>
+  <!-- FLASK GLOW AURA -->
+  <radialGradient id="fa" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00ff88" stop-opacity="0.55"/>
+    <stop offset="55%" stop-color="#00cc55" stop-opacity="0.20"/>
+    <stop offset="100%" stop-color="#009933" stop-opacity="0"/>
+  </radialGradient>
+  <!-- CRIMSON PLUME -->
+  <linearGradient id="cp" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e8102a"/>
+    <stop offset="100%" stop-color="#8b0000"/>
+  </linearGradient>
+  <!-- MOLTEN METAL crucible -->
+  <radialGradient id="mm" cx="50%" cy="25%" r="70%">
+    <stop offset="0%" stop-color="#ffee40"/>
+    <stop offset="30%" stop-color="#ff8800"/>
+    <stop offset="70%" stop-color="#cc2800"/>
+    <stop offset="100%" stop-color="#660000"/>
+  </radialGradient>
+  <!-- ANVIL STEEL -->
+  <linearGradient id="av" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#48485a"/>
+    <stop offset="100%" stop-color="#1a1a28"/>
+  </linearGradient>
+  <!-- TITLE GLOW filter -->
+  <filter id="tg" x="-15%" y="-60%" width="130%" height="220%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="b"/>
+    <feFlood flood-color="#cc001a" flood-opacity="0.75" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="s"/>
+    <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- GLYPH GLOW filter -->
+  <filter id="gg" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- FLASK LIGHT soft bloom -->
+  <filter id="fl" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- DROP SHADOW -->
+  <filter id="ds" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.65"/>
+  </filter>
+</defs>
+
+<!-- ================================ -->
+<!-- LAYER 1: BACKGROUND + ATMOSPHERE -->
+<!-- ================================ -->
+<rect width="1200" height="800" fill="url(#bg)"/>
+<rect width="1200" height="800" fill="url(#fg)"/>
+<rect width="1200" height="800" fill="url(#ca)"/>
+
+<!-- ================================ -->
+<!-- LAYER 2: ARCHITECTURE            -->
+<!-- ================================ -->
+<!-- Vault arch ceiling -->
+<path d="M 0 0 L 0 225 Q 600 55 1200 225 L 1200 0 Z" fill="#07070e"/>
+<path d="M 70 0 L 70 210 Q 600 75 1130 210 L 1130 0 Z" fill="none" stroke="#181828" stroke-width="2"/>
+<!-- Arch keystone -->
+<path d="M 585 70 L 600 56 L 615 70 L 610 84 L 590 84 Z" fill="#161624" stroke="#242434" stroke-width="1"/>
+
+<!-- Left stone pillar -->
+<rect x="55" y="0" width="92" height="800" fill="url(#st)"/>
+<rect x="55" y="0" width="14" height="800" fill="#ff5500" opacity="0.13"/>
+<line x1="82" y1="0" x2="82" y2="800" stroke="#141420" stroke-width="1.5"/>
+<line x1="108" y1="0" x2="108" y2="800" stroke="#1c1c2c" stroke-width="1"/>
+<line x1="132" y1="0" x2="132" y2="800" stroke="#101018" stroke-width="0.8"/>
+<rect x="50" y="0" width="102" height="28" fill="#161624" stroke="#222232" stroke-width="1"/>
+
+<!-- Right stone pillar -->
+<rect x="1053" y="0" width="92" height="800" fill="url(#st)"/>
+<line x1="1070" y1="0" x2="1070" y2="800" stroke="#141420" stroke-width="1.5"/>
+<line x1="1096" y1="0" x2="1096" y2="800" stroke="#1c1c2c" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1120" y2="800" stroke="#101018" stroke-width="0.8"/>
+<rect x="1048" y="0" width="102" height="28" fill="#161624" stroke="#222232" stroke-width="1"/>
+
+<!-- Floor stone -->
+<rect x="0" y="714" width="1200" height="86" fill="#08080f"/>
+<rect x="0" y="712" width="1200" height="4" fill="#1c1c2c"/>
+<line x1="0" y1="738" x2="1200" y2="738" stroke="#111120" stroke-width="1.5"/>
+<line x1="0" y1="760" x2="1200" y2="760" stroke="#0c0c18" stroke-width="1"/>
+<line x1="300" y1="714" x2="300" y2="800" stroke="#0c0c18" stroke-width="1"/>
+<line x1="600" y1="714" x2="600" y2="800" stroke="#131320" stroke-width="1.5"/>
+<line x1="900" y1="714" x2="900" y2="800" stroke="#0c0c18" stroke-width="1"/>
+
+<!-- Forge heat on floor lower-left -->
+<ellipse cx="268" cy="716" rx="235" ry="50" fill="#ff4400" opacity="0.24"/>
+<ellipse cx="268" cy="716" rx="145" ry="32" fill="#ff7700" opacity="0.28"/>
+<ellipse cx="268" cy="716" rx="68" ry="16" fill="#ffaa00" opacity="0.38"/>
+
+<!-- ================================ -->
+<!-- LAYER 3: BACKGROUND GLYPHS      -->
+<!-- ================================ -->
+
+<!-- CRYSTAL LATTICE upper background steel-blue faint -->
+<g opacity="0.22" fill="none" stroke="#8898b0" stroke-width="1" transform="translate(448,80)">
+  <circle cx="60" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="120" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="180" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="240" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="300" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="60" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="120" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="180" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="240" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="300" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="60" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="120" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="180" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="240" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
+  <circle cx="300" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
+  <line x1="60" y1="0" x2="120" y2="0"/><line x1="120" y1="0" x2="180" y2="0"/>
+  <line x1="180" y1="0" x2="240" y2="0"/><line x1="240" y1="0" x2="300" y2="0"/>
+  <line x1="60" y1="54" x2="120" y2="54"/><line x1="120" y1="54" x2="180" y2="54"/>
+  <line x1="180" y1="54" x2="240" y2="54"/><line x1="240" y1="54" x2="300" y2="54"/>
+  <line x1="60" y1="108" x2="120" y2="108"/><line x1="120" y1="108" x2="180" y2="108"/>
+  <line x1="180" y1="108" x2="240" y2="108"/><line x1="240" y1="108" x2="300" y2="108"/>
+  <line x1="60" y1="0" x2="60" y2="54"/><line x1="120" y1="0" x2="120" y2="54"/>
+  <line x1="180" y1="0" x2="180" y2="54"/><line x1="240" y1="0" x2="240" y2="54"/>
+  <line x1="300" y1="0" x2="300" y2="54"/>
+  <line x1="60" y1="54" x2="60" y2="108"/><line x1="120" y1="54" x2="120" y2="108"/>
+  <line x1="180" y1="54" x2="180" y2="108"/><line x1="240" y1="54" x2="240" y2="108"/>
+  <line x1="300" y1="54" x2="300" y2="108"/>
+  <line x1="60" y1="0" x2="90" y2="-24" stroke-dasharray="3,4"/>
+  <line x1="120" y1="0" x2="150" y2="-24" stroke-dasharray="3,4"/>
+  <line x1="180" y1="0" x2="210" y2="-24" stroke-dasharray="3,4"/>
+  <line x1="240" y1="0" x2="270" y2="-24" stroke-dasharray="3,4"/>
+  <line x1="300" y1="0" x2="330" y2="-24" stroke-dasharray="3,4"/>
+  <line x1="60" y1="54" x2="90" y2="30" stroke-dasharray="3,4"/>
+  <line x1="120" y1="54" x2="150" y2="30" stroke-dasharray="3,4"/>
+  <line x1="180" y1="54" x2="210" y2="30" stroke-dasharray="3,4"/>
+  <line x1="240" y1="54" x2="270" y2="30" stroke-dasharray="3,4"/>
+  <line x1="300" y1="54" x2="330" y2="30" stroke-dasharray="3,4"/>
+</g>
+
+<!-- WAVEFORM upper-right background mathematical-signal science -->
+<g transform="translate(622,142)" opacity="0.48" filter="url(#gg)">
+  <path d="M 0 26 C 16 6 34 6 50 26 C 66 46 84 46 100 26 C 116 6 134 6 150 26 C 166 46 184 46 200 26 C 216 6 234 6 250 26 C 266 46 284 46 300 26 C 316 6 334 6 350 26"
+        fill="none" stroke="#dc143c" stroke-width="2.5"/>
+  <line x1="-8" y1="26" x2="358" y2="26" stroke="#440010" stroke-width="0.8" stroke-dasharray="4,5"/>
+  <text x="362" y="30" font-family="serif" font-size="12" fill="#aa0010" opacity="0.7">Hz</text>
+</g>
+
+<!-- ================================ -->
+<!-- LAYER 4: MIDGROUND GLYPHS       -->
+<!-- ================================ -->
+
+<!-- DNA DOUBLE HELIX left side life science -->
+<g transform="translate(166,200)" filter="url(#gg)" opacity="0.92">
+  <!-- Strand A crimson starts right x=48 winds to left x=4 and back -->
+  <path d="M 48 0 C 48 22 4 42 4 64 C 4 86 48 106 48 128 C 48 150 4 170 4 192
+           C 4 214 48 234 48 256 C 48 278 4 298 4 320 C 4 342 48 362 48 384
+           C 48 406 4 426 4 448"
+        fill="none" stroke="#dc143c" stroke-width="3.2"/>
+  <!-- Strand B bronze starts left x=4 opposite phase -->
+  <path d="M 4 0 C 4 22 48 42 48 64 C 48 86 4 106 4 128 C 4 150 48 170 48 192
+           C 48 214 4 234 4 256 C 4 278 48 298 48 320 C 48 342 4 362 4 384
+           C 4 406 48 426 48 448"
+        fill="none" stroke="#b87832" stroke-width="3.2"/>
+  <!-- Rungs at peaks y=0,64,128,192,256,320,384,448 -->
+  <line x1="4" y1="0" x2="48" y2="0" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="64" x2="48" y2="64" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="128" x2="48" y2="128" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="192" x2="48" y2="192" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="256" x2="48" y2="256" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="320" x2="48" y2="320" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="384" x2="48" y2="384" stroke="#7a8898" stroke-width="2.2"/>
+  <line x1="4" y1="448" x2="48" y2="448" stroke="#7a8898" stroke-width="2.2"/>
+  <!-- Crossing nodes at midpoints y=32,96,160,224,288,352,416 -->
+  <circle cx="26" cy="32" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="96" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="160" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="224" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="288" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="352" r="3.5" fill="#8090a4"/>
+  <circle cx="26" cy="416" r="3.5" fill="#8090a4"/>
+  <text x="26" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="12"
+        fill="#dc143c" letter-spacing="3" opacity="0.75">DNA</text>
+</g>
+
+<!-- ATOMIC ORBITAL DIAGRAM right side physical science -->
+<g transform="translate(908,200)" filter="url(#gg)" opacity="0.88">
+  <!-- Ambient aura -->
+  <circle cx="90" cy="122" r="88" fill="#8b0000" opacity="0.06"/>
+  <!-- Nucleus -->
+  <circle cx="90" cy="122" r="15" fill="#c07820"/>
+  <circle cx="90" cy="122" r="9" fill="#e8b048"/>
+  <circle cx="86" cy="118" r="3.5" fill="#cc1020"/>
+  <circle cx="94" cy="118" r="3.5" fill="#7a9aac"/>
+  <circle cx="86" cy="126" r="3.5" fill="#cc1020"/>
+  <circle cx="94" cy="126" r="3.5" fill="#7a9aac"/>
+  <!-- Orbit 1 circular -->
+  <ellipse cx="90" cy="122" rx="54" ry="54" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7"/>
+  <circle cx="144" cy="122" r="5.5" fill="#90b8d8"/>
+  <circle cx="144" cy="122" r="2.5" fill="#d8f0ff"/>
+  <!-- Orbit 2 tilted -52 degrees -->
+  <ellipse cx="90" cy="122" rx="80" ry="28" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7" transform="rotate(-52 90 122)"/>
+  <circle cx="90" cy="46" r="5.5" fill="#90b8d8" transform="rotate(-52 90 122)"/>
+  <circle cx="90" cy="46" r="2.5" fill="#d8f0ff" transform="rotate(-52 90 122)"/>
+  <!-- Orbit 3 tilted +52 degrees -->
+  <ellipse cx="90" cy="122" rx="80" ry="28" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7" transform="rotate(52 90 122)"/>
+  <circle cx="90" cy="46" r="5.5" fill="#90b8d8" transform="rotate(52 90 122)"/>
+  <circle cx="90" cy="46" r="2.5" fill="#d8f0ff" transform="rotate(52 90 122)"/>
+  <text x="90" y="218" text-anchor="middle" font-family="Georgia, serif" font-size="12"
+        fill="#b87832" letter-spacing="3" opacity="0.75">ATOM</text>
+</g>
+
+<!-- ================================ -->
+<!-- LAYER 5: CHARACTER              -->
+<!-- ================================ -->
+
+<!-- Ground shadow -->
+<ellipse cx="600" cy="717" rx="92" ry="14" fill="#000000" opacity="0.55"/>
+
+<!-- HAIR back flowing -->
+<path d="M 560 214 C 540 196 528 170 532 144 C 536 116 550 98 570 90
+         C 586 84 614 84 630 90 C 650 98 664 118 667 145 C 670 172 657 196 640 212
+         C 637 232 638 260 640 284 C 642 322 646 364 642 406 C 638 448 630 492 634 534"
+      fill="url(#hr)" stroke="#180802" stroke-width="1.2"/>
+
+<!-- HELMET main shell bronze warm forge-lit left -->
+<path d="M 560 216 C 553 194 550 167 554 142 C 558 113 572 94 588 85
+         C 596 81 614 81 622 85 C 638 94 652 115 655 143 C 659 169 654 196 646 218"
+      fill="url(#bw)" stroke="#643808" stroke-width="2.2"/>
+<!-- Helmet front face plate slightly lighter -->
+<path d="M 564 218 C 558 198 556 170 560 144 C 564 118 576 100 592 92
+         C 600 88 612 88 620 92 C 636 100 648 120 651 146 C 655 172 648 198 640 220"
+      fill="url(#bn)" stroke="#643808" stroke-width="1.5"/>
+<!-- Plume channel ridge -->
+<path d="M 594 92 C 597 78 600 64 600 54 C 600 64 603 78 606 92"
+      fill="#7a4010" stroke="#523008" stroke-width="1"/>
+<!-- HELMET PLUME crimson horsehair crest -->
+<path d="M 592 92 C 587 72 584 48 586 26 C 588 10 594 3 600 1 C 606 3 612 10 614 26
+         C 616 48 613 72 608 92"
+      fill="#cc0018" stroke="#880010" stroke-width="1.2"/>
+<path d="M 595 90 C 591 70 589 48 591 28 C 593 14 596 8 600 6 C 604 8 607 14 609 28
+         C 611 48 609 70 605 90"
+      fill="#e8102a" stroke="none" opacity="0.75"/>
+<!-- Decorative brow band engraved -->
+<path d="M 560 218 C 570 202 584 194 600 192 C 616 194 630 202 640 218"
+      fill="none" stroke="#e0b048" stroke-width="2.5"/>
+<circle cx="577" cy="204" r="3.5" fill="#e0b048"/>
+<circle cx="600" cy="193" r="3.5" fill="#e0b048"/>
+<circle cx="623" cy="204" r="3.5" fill="#e0b048"/>
+<!-- Cheek guards -->
+<path d="M 560 218 C 554 230 552 248 555 262 L 570 270 L 574 226 Z"
+      fill="url(#bw)" stroke="#643808" stroke-width="1.5"/>
+<path d="M 640 218 C 646 230 648 248 645 262 L 630 270 L 626 226 Z"
+      fill="url(#bn)" stroke="#643808" stroke-width="1.5"/>
+<!-- Nasal guard -->
+<rect x="597" y="194" width="6" height="28" rx="3" fill="url(#bn)" stroke="#643808" stroke-width="0.8"/>
+
+<!-- FACE oval -->
+<ellipse cx="600" cy="234" rx="44" ry="50" fill="url(#sk)"/>
+<!-- Forge warmth on left cheek -->
+<ellipse cx="580" cy="234" rx="30" ry="36" fill="#ff6600" opacity="0.12"/>
+<!-- Cheekbone shadow right side darker -->
+<path d="M 624 256 C 634 262 640 275 636 285 C 632 293 619 297 609 294"
+      fill="#784030" stroke="none" opacity="0.6"/>
+<!-- Eyebrows strong determined -->
+<path d="M 573 219 C 581 213 591 211 597 213" fill="none" stroke="#280e04" stroke-width="2.8" stroke-linecap="round"/>
+<path d="M 603 213 C 609 211 619 213 627 219" fill="none" stroke="#280e04" stroke-width="2.8" stroke-linecap="round"/>
+<!-- Left eye -->
+<ellipse cx="585" cy="229" rx="11" ry="7.5" fill="#f0f0f8"/>
+<ellipse cx="585" cy="229" rx="7" ry="7" fill="#38100a"/>
+<ellipse cx="585" cy="229" rx="3.5" ry="3.5" fill="#080408"/>
+<circle cx="589" cy="225" r="2.2" fill="#f8f8ff" opacity="0.9"/>
+<!-- Right eye -->
+<ellipse cx="615" cy="229" rx="11" ry="7.5" fill="#f0f0f8"/>
+<ellipse cx="615" cy="229" rx="7" ry="7" fill="#38100a"/>
+<ellipse cx="615" cy="229" rx="3.5" ry="3.5" fill="#080408"/>
+<circle cx="619" cy="225" r="2.2" fill="#f8f8ff" opacity="0.9"/>
+<!-- Nose -->
+<path d="M 600 234 C 597 243 594 249 596 254 C 600 259 604 256 604 251"
+      fill="none" stroke="#9a6040" stroke-width="1.6" stroke-linecap="round"/>
+<!-- Mouth set determined -->
+<path d="M 588 264 L 612 264" stroke="#6a3020" stroke-width="2.8" stroke-linecap="round"/>
+<path d="M 588 264 C 591 270 609 270 612 264" fill="#6a3020" stroke="none"/>
+<!-- Ear left -->
+<ellipse cx="555" cy="238" rx="9" ry="13" fill="#c08850"/>
+
+<!-- NECK -->
+<rect x="590" y="278" width="20" height="30" rx="4" fill="#c08850"/>
+<rect x="590" y="278" width="7" height="30" rx="3" fill="#e09858" opacity="0.55"/>
+
+<!-- SHOULDER PAULDRONS -->
+<!-- Left warm forge-lit -->
+<path d="M 534 298 C 518 290 504 302 503 320 C 502 337 516 354 532 356 L 564 348 L 566 298"
+      fill="url(#bw)" stroke="#643808" stroke-width="2"/>
+<path d="M 505 330 C 514 338 534 343 554 338" fill="none" stroke="#e0b048" stroke-width="1.5"/>
+<!-- Right cooler shadowed -->
+<path d="M 666 298 C 682 290 696 302 697 320 C 698 337 684 354 668 356 L 636 348 L 634 298"
+      fill="url(#bn)" stroke="#643808" stroke-width="2"/>
+<path d="M 695 330 C 686 338 666 343 646 338" fill="none" stroke="#c89838" stroke-width="1.5"/>
+
+<!-- LORICA SEGMENTATA horizontal armor bands -->
+<!-- Upper chest plate -->
+<path d="M 543 304 C 543 287 561 277 600 275 C 639 277 657 287 657 304 L 662 324 L 538 324 Z"
+      fill="url(#bw)" stroke="#643808" stroke-width="2"/>
+<line x1="600" y1="279" x2="600" y2="324" stroke="#7a4010" stroke-width="2.2"/>
+<!-- Band 1 -->
+<rect x="536" y="322" width="128" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
+<!-- Band 2 -->
+<rect x="534" y="342" width="132" height="22" fill="url(#bw)" stroke="#643808" stroke-width="1.3"/>
+<!-- Band 3 -->
+<rect x="532" y="362" width="136" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
+<!-- Band 4 -->
+<rect x="530" y="382" width="140" height="22" fill="url(#bw)" stroke="#643808" stroke-width="1.3"/>
+<!-- Band 5 -->
+<rect x="528" y="402" width="144" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
+<!-- Band highlight lines -->
+<line x1="536" y1="333" x2="664" y2="333" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
+<line x1="534" y1="353" x2="666" y2="353" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
+<line x1="532" y1="373" x2="668" y2="373" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
+<line x1="530" y1="393" x2="670" y2="393" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
+
+<!-- SCIENTIST APRON over armor linen -->
+<path d="M 574 282 L 570 354 L 568 420 L 573 460 L 600 464 L 627 460 L 632 420 L 630 354 L 626 282
+         C 618 277 608 274 600 274 C 592 274 582 277 574 282 Z"
+      fill="url(#ap)" opacity="0.88"/>
+<!-- Apron straps -->
+<path d="M 574 282 C 562 278 543 274 536 277" fill="none" stroke="#d4d0c4" stroke-width="2"/>
+<path d="M 626 282 C 638 278 657 274 664 277" fill="none" stroke="#d4d0c4" stroke-width="2"/>
+<!-- Apron pocket -->
+<rect x="581" y="342" width="38" height="28" rx="3" fill="none" stroke="#b0aa9c" stroke-width="1.2"/>
+<!-- Reagent stains on apron -->
+<ellipse cx="592" cy="302" rx="5" ry="4" fill="#7a3820" opacity="0.45"/>
+<ellipse cx="617" cy="318" rx="4" ry="3" fill="#1a5a18" opacity="0.4"/>
+<ellipse cx="607" cy="356" rx="3" ry="2.5" fill="#18285a" opacity="0.38"/>
+<ellipse cx="589" cy="382" rx="2.5" ry="2" fill="#7a3820" opacity="0.3"/>
+
+<!-- PTERUGES hanging leather strips at waist -->
+<g fill="#503010" stroke="#301808" stroke-width="0.8">
+  <path d="M 530 422 L 534 464 L 541 464 L 540 422 Z"/>
+  <path d="M 541 422 L 544 464 L 551 464 L 550 422 Z"/>
+  <path d="M 552 422 L 554 464 L 561 464 L 560 422 Z"/>
+  <path d="M 563 422 L 564 464 L 571 464 L 571 422 Z"/>
+  <path d="M 629 422 L 629 464 L 636 464 L 637 422 Z"/>
+  <path d="M 640 422 L 639 464 L 646 464 L 648 422 Z"/>
+  <path d="M 650 422 L 648 464 L 655 464 L 658 422 Z"/>
+  <path d="M 660 422 L 657 464 L 664 464 L 668 422 Z"/>
+</g>
+
+<!-- LEFT ARM flask side extending forward-left -->
+<!-- Upper arm -->
+<path d="M 536 310 L 500 365 L 494 392 L 508 398 L 521 386 L 547 330 L 557 304"
+      fill="url(#sk)" stroke="#7a4028" stroke-width="1.2"/>
+<!-- Left vambrace bronze forearm guard forge-warm -->
+<path d="M 500 363 L 470 414 L 460 446 L 475 452 L 506 408 L 513 368 Z"
+      fill="url(#bw)" stroke="#643808" stroke-width="1.3" opacity="0.85"/>
+<!-- Forearm skin under vambrace -->
+<path d="M 502 365 L 472 416 L 462 448 L 475 452 L 508 408 L 514 368"
+      fill="url(#sk)" stroke="#7a4028" stroke-width="0.8"/>
+<!-- Left hand -->
+<ellipse cx="460" cy="454" rx="16" ry="11" fill="url(#sk)" transform="rotate(-18 460 454)"/>
+<path d="M 448 449 C 444 441 442 435 446 431" fill="none" stroke="#9a6038" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 454 445 C 450 437 449 431 453 427" fill="none" stroke="#9a6038" stroke-width="1.5" stroke-linecap="round"/>
+
+<!-- REAGENT FLASK glowing emerald in left hand -->
+<!-- Flask glow aura bloom -->
+<circle cx="436" cy="498" r="58" fill="url(#fa)" filter="url(#fl)"/>
+<!-- Flask glass body -->
+<path d="M 420 472 C 404 478 388 497 388 518 C 388 543 407 563 430 566
+         C 454 569 476 552 478 528 C 480 505 464 482 446 474 Z"
+      fill="#003c20" stroke="#00a844" stroke-width="1.8"/>
+<!-- Flask glowing interior -->
+<path d="M 426 476 C 412 481 398 496 398 515 C 398 537 415 555 437 558
+         C 459 561 475 546 477 525 C 479 504 465 484 447 477 Z"
+      fill="url(#fi)"/>
+<!-- Flask surface highlight -->
+<path d="M 408 500 C 410 487 421 479 434 477" fill="none" stroke="#aaffcc" stroke-width="2" opacity="0.7"/>
+<!-- Flask neck -->
+<rect x="445" y="449" width="14" height="27" rx="3" fill="#002a18" stroke="#00aa44" stroke-width="1.2"/>
+<!-- Flask stopper cork bronze -->
+<rect x="441" y="442" width="22" height="11" rx="3" fill="url(#bn)"/>
+<!-- Bubbles rising in flask -->
+<circle cx="418" cy="522" r="5" fill="#44ffaa" opacity="0.65"/>
+<circle cx="440" cy="510" r="4" fill="#44ffaa" opacity="0.55"/>
+<circle cx="428" cy="537" r="3" fill="#44ffaa" opacity="0.45"/>
+<circle cx="455" cy="527" r="3.5" fill="#aaffcc" opacity="0.50"/>
+<!-- Flask light cast greenish on arm -->
+<path d="M 458 474 L 484 458 L 492 464" fill="none" stroke="#00ff88" stroke-width="0.8" opacity="0.3"/>
+
+<!-- RIGHT ARM sword raised aloft -->
+<!-- Upper arm going up-right -->
+<path d="M 656 310 L 695 276 L 722 258 L 732 270 L 712 287 L 675 328 L 644 324"
+      fill="url(#sk)" stroke="#7a4028" stroke-width="1.2"/>
+<!-- Right vambrace bronze over forearm -->
+<path d="M 693 274 L 728 250 L 744 240 L 754 252 L 740 264 L 706 286 Z"
+      fill="url(#bn)" stroke="#643808" stroke-width="1.3" opacity="0.85"/>
+<!-- Right hand gripping gladius -->
+<path d="M 728 252 L 748 236 L 760 228 L 768 240 L 756 250 L 742 262 Z"
+      fill="url(#sk)"/>
+
+<!-- GLADIUS Roman short sword held aloft blade pointing up-right -->
+<!-- Pommel rounded bronze -->
+<ellipse cx="764" cy="256" rx="12" ry="9" fill="url(#bn)" transform="rotate(-28 764 256)"/>
+<!-- Grip wood-wrapped -->
+<path d="M 756 250 L 780 228" stroke="#2c1404" stroke-width="14" stroke-linecap="round"/>
+<!-- Grip cord wrapping -->
+<path d="M 758 248 L 782 226" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
+<path d="M 761 244 L 785 222" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
+<path d="M 764 240 L 788 218" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
+<!-- Crossguard bronze -->
+<path d="M 740 242 L 796 216" stroke="#c07828" stroke-width="9" stroke-linecap="round"/>
+<path d="M 740 242 L 796 216" stroke="#e8b048" stroke-width="3.5" stroke-linecap="round" opacity="0.45"/>
+<!-- Blade leaf-shaped steel going up-right -->
+<path d="M 743 238 L 678 130 L 685 122 L 802 208 Z" fill="url(#sb)"/>
+<!-- Blade fuller central groove -->
+<line x1="746" y1="234" x2="684" y2="128" stroke="#c8d4e0" stroke-width="1.8" opacity="0.7"/>
+<!-- Blade edge steel -->
+<path d="M 743 238 L 678 128" stroke="#e8ecf4" stroke-width="0.8"/>
+<path d="M 802 208 L 685 122" stroke="#384050" stroke-width="0.8"/>
+<!-- Forge glow glint on blade left edge -->
+<path d="M 768 224 L 738 172" stroke="#ff9940" stroke-width="1.5" opacity="0.32"/>
+
+<!-- LEGS -->
+<!-- Left thigh -->
+<path d="M 554 464 L 540 562 L 555 576 L 574 570 L 582 464"
+      fill="url(#sk)" stroke="#7a4028" stroke-width="1"/>
+<!-- Right thigh -->
+<path d="M 646 464 L 660 562 L 645 578 L 626 572 L 618 464"
+      fill="url(#sk)" stroke="#7a4028" stroke-width="1"/>
+
+<!-- Left greave bronze warm forge-lit -->
+<path d="M 540 560 L 536 628 L 548 656 L 568 656 L 577 628 L 573 567"
+      fill="url(#bw)" stroke="#643808" stroke-width="1.8"/>
+<line x1="538" y1="582" x2="574" y2="582" stroke="#643808" stroke-width="0.8"/>
+<line x1="536" y1="604" x2="575" y2="604" stroke="#643808" stroke-width="0.8"/>
+<line x1="536" y1="626" x2="575" y2="626" stroke="#643808" stroke-width="0.8"/>
+
+<!-- Right greave bronze neutral -->
+<path d="M 660 560 L 664 628 L 652 656 L 632 656 L 623 628 L 627 567"
+      fill="url(#bn)" stroke="#643808" stroke-width="1.8"/>
+<line x1="662" y1="582" x2="626" y2="582" stroke="#643808" stroke-width="0.8"/>
+<line x1="664" y1="604" x2="625" y2="604" stroke="#643808" stroke-width="0.8"/>
+<line x1="664" y1="626" x2="625" y2="626" stroke="#643808" stroke-width="0.8"/>
+
+<!-- Caligae Roman military sandals -->
+<!-- Left foot -->
+<path d="M 536 654 L 532 688 L 540 692 L 570 692 L 578 688 L 576 654 Z" fill="#2c1604"/>
+<line x1="536" y1="664" x2="576" y2="664" stroke="#4c2c14" stroke-width="1.5"/>
+<line x1="534" y1="676" x2="576" y2="676" stroke="#4c2c14" stroke-width="1.5"/>
+<line x1="534" y1="686" x2="576" y2="686" stroke="#4c2c14" stroke-width="1"/>
+<!-- Right foot -->
+<path d="M 664 654 L 668 688 L 660 692 L 630 692 L 622 688 L 624 654 Z" fill="#2c1604"/>
+<line x1="664" y1="664" x2="624" y2="664" stroke="#4c2c14" stroke-width="1.5"/>
+<line x1="666" y1="676" x2="624" y2="676" stroke="#4c2c14" stroke-width="1.5"/>
+<line x1="666" y1="686" x2="624" y2="686" stroke="#4c2c14" stroke-width="1"/>
+
+<!-- ================================ -->
+<!-- LAYER 6: FOREGROUND INSTRUMENTS -->
+<!-- ================================ -->
+
+<!-- ENGRAM engraved memory tablet left -->
+<g transform="translate(172,600)">
+  <rect x="0" y="0" width="130" height="98" rx="6" fill="#14142a" stroke="#3c3c6c" stroke-width="2.2"/>
+  <rect x="7" y="7" width="116" height="84" rx="4" fill="#0c0c1e" stroke="#2a2a52" stroke-width="1"/>
+  <!-- Engraved inscription lines -->
+  <line x1="16" y1="20" x2="114" y2="20" stroke="#4848aa" stroke-width="1.3"/>
+  <line x1="16" y1="30" x2="90" y2="30" stroke="#383888" stroke-width="0.8"/>
+  <line x1="16" y1="40" x2="106" y2="40" stroke="#4848aa" stroke-width="1.3"/>
+  <line x1="16" y1="50" x2="74" y2="50" stroke="#383888" stroke-width="0.8"/>
+  <line x1="16" y1="60" x2="98" y2="60" stroke="#4848aa" stroke-width="1"/>
+  <line x1="16" y1="70" x2="82" y2="70" stroke="#383888" stroke-width="0.8"/>
+  <!-- Central circuit engram node -->
+  <circle cx="65" cy="50" r="15" fill="none" stroke="#5858cc" stroke-width="1.8"/>
+  <circle cx="65" cy="50" r="6" fill="#3838aa"/>
+  <circle cx="65" cy="50" r="2.5" fill="#6868dd"/>
+  <line x1="65" y1="35" x2="65" y2="22" stroke="#5858cc" stroke-width="1.2"/>
+  <line x1="50" y1="50" x2="30" y2="50" stroke="#5858cc" stroke-width="1.2"/>
+  <line x1="80" y1="50" x2="100" y2="50" stroke="#5858cc" stroke-width="1.2"/>
+  <line x1="65" y1="65" x2="65" y2="80" stroke="#5858cc" stroke-width="1.2"/>
+  <text x="65" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="10"
+        fill="#6868cc" letter-spacing="3">ENGRAM</text>
+  <!-- Forge warm left edge glow -->
+  <rect x="0" y="0" width="6" height="98" rx="3" fill="#ff6600" opacity="0.18"/>
+</g>
+
+<!-- FORGE smith anvil center-right -->
+<g transform="translate(670,616)">
+  <!-- Anvil base foot -->
+  <path d="M 18 88 L 0 96 L 0 104 L 150 104 L 150 96 L 132 88 Z" fill="#1c1c28" stroke="#2c2c38" stroke-width="1"/>
+  <!-- Anvil waist body -->
+  <rect x="18" y="46" width="114" height="44" fill="#2a2a38" stroke="#3a3a4a" stroke-width="1"/>
+  <!-- Anvil table top -->
+  <path d="M 0 46 L 150 46 L 144 22 L 114 22 L 114 8 L 36 8 L 36 22 L 6 22 Z"
+        fill="url(#av)" stroke="#4c4c5c" stroke-width="1.5"/>
+  <!-- Anvil horn right -->
+  <path d="M 144 32 L 150 46 L 170 40 L 160 24 Z" fill="url(#av)" stroke="#4c4c5c" stroke-width="1"/>
+  <!-- Forge-warm left highlight -->
+  <path d="M 0 22 L 8 22 L 20 46 L 20 88 L 0 88 Z" fill="#ff6600" opacity="0.18"/>
+  <!-- Hot-work mark on table top -->
+  <ellipse cx="75" cy="15" rx="20" ry="5.5" fill="#ff3300" opacity="0.32"/>
+  <ellipse cx="75" cy="15" rx="10" ry="2.8" fill="#ff7700" opacity="0.42"/>
+  <!-- Surface striations wear marks -->
+  <line x1="40" y1="10" x2="110" y2="10" stroke="#4c4c5c" stroke-width="0.7"/>
+  <line x1="36" y1="17" x2="114" y2="17" stroke="#4c4c5c" stroke-width="0.7"/>
+  <!-- Sparks above anvil -->
+  <circle cx="65" cy="3" r="2.5" fill="#ffcc00" opacity="0.75"/>
+  <circle cx="80" cy="0" r="2" fill="#ff8800" opacity="0.65"/>
+  <circle cx="57" cy="1" r="1.5" fill="#ffee00" opacity="0.55"/>
+  <circle cx="90" cy="4" r="1.8" fill="#ff6600" opacity="0.60"/>
+  <text x="75" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="10"
+        fill="#7a7a8a" letter-spacing="4">FORGE</text>
+</g>
+
+<!-- CRUCIBLE molten crucible right -->
+<g transform="translate(906,604)">
+  <!-- Outer shell -->
+  <path d="M 12 90 C 2 70 0 46 4 24 L 28 12 L 96 12 L 120 24 C 124 46 122 70 112 90 Z"
+        fill="#2a1408"/>
+  <!-- Molten metal interior -->
+  <path d="M 18 86 C 10 66 8 44 12 24 L 30 16 L 94 16 L 112 24 C 116 44 114 66 106 86 Z"
+        fill="url(#mm)"/>
+  <!-- Molten surface lip -->
+  <ellipse cx="62" cy="17" rx="44" ry="11" fill="#ff8800" opacity="0.92"/>
+  <ellipse cx="62" cy="17" rx="29" ry="7" fill="#ffcc00" opacity="0.87"/>
+  <!-- Surface bloom -->
+  <ellipse cx="46" cy="18" rx="10" ry="3.5" fill="#ffff88" opacity="0.75"/>
+  <!-- Walls thickness -->
+  <path d="M 4 24 L 12 24 L 18 86 L 10 86 Z" fill="#3a2010"/>
+  <path d="M 120 24 L 112 24 L 106 86 L 114 86 Z" fill="#180800"/>
+  <!-- Side handles -->
+  <path d="M 4 32 C -8 40 -8 62 4 70" fill="none" stroke="#3a2010" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 120 32 C 132 40 132 62 120 70" fill="none" stroke="#180800" stroke-width="7" stroke-linecap="round"/>
+  <!-- Heat shimmer wisps above crucible -->
+  <path d="M 35 7 C 37 -1 34 -7 36 -14" fill="none" stroke="#ff8800" stroke-width="0.9" opacity="0.45" stroke-linecap="round"/>
+  <path d="M 55 4 C 58 -4 55 -11 57 -18" fill="none" stroke="#ff6600" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 78 6 C 80 -2 77 -8 79 -15" fill="none" stroke="#ff8800" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
+  <text x="62" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="10"
+        fill="#8a4a28" letter-spacing="2">CRUCIBLE</text>
+</g>
+
+<!-- ================================ -->
+<!-- LAYER 7: TITLE + TYPOGRAPHY     -->
+<!-- ================================ -->
+
+<!-- Decorative rules flanking title -->
+<line x1="128" y1="66" x2="306" y2="66" stroke="#6a0010" stroke-width="1.2"/>
+<line x1="894" y1="66" x2="1072" y2="66" stroke="#6a0010" stroke-width="1.2"/>
+<!-- Diamond accents -->
+<polygon points="318,59 330,66 318,73 306,66" fill="#8b0010"/>
+<polygon points="882,59 894,66 882,73 870,66" fill="#8b0010"/>
+
+<!-- Title -->
+<text x="600" y="76"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="70"
+      font-weight="bold"
+      letter-spacing="14"
+      fill="#e0101e"
+      filter="url(#tg)">MARCELLA</text>
+
+<!-- Tagline -->
+<text x="600" y="754"
+      text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="17"
+      letter-spacing="2.5"
+      fill="#9aacbc"
+      opacity="0.92">The little warrior of the science legion</text>
+
+<!-- Tagline rules -->
+<line x1="148" y1="758" x2="332" y2="758" stroke="#3a3a4a" stroke-width="0.8"/>
+<line x1="868" y1="758" x2="1052" y2="758" stroke="#3a3a4a" stroke-width="0.8"/>
+
+<!-- Brand mark -->
+<text x="600" y="776"
+      text-anchor="middle"
+      font-family="Georgia, serif"
+      font-size="11"
+      letter-spacing="4"
+      fill="#4a4a5a"
+      opacity="0.65">ETHARA.AI  --  TERMINAL-BENCH SCIENCE 0.1</text>
+
+</svg>

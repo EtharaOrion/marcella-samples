@@ -1,17 +1,81 @@
-# marcella-samples
+<p align="center"><img src="images/hero.svg" alt="Marcella" width="720"></p>
 
-GENERATED SECTION. DO NOT HAND-EDIT. This shell is scaffolded and reconciled by the memory instrument; the bundles inside it are written by the authoring instrument alone. Source of truth for the standing below is the parent project's root report.
+# Marcella: samples
 
-This repository is the sample task-lane root for Marcella. A task identity is resident under at most one task-lane root, so a uuid present here is absent from the delivery lane.
+<p align="center"><b>The samples lane: 0 of 30 Harbor task bundles.</b></p>
 
-## Promoted set
+<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-0_of_30-845EF7" alt="bundles: 0 of 30"></a> <a href="#evidence-status"><img src="https://img.shields.io/badge/sealed-0-845EF7" alt="sealed: 0"></a> <a href="#difficulty-tiers"><img src="https://img.shields.io/badge/difficulty-measured-845EF7" alt="difficulty: measured"></a></p>
 
-None. No task bundle has been promoted into this lane. The set is empty at genesis because no task has cleared authoring, external signed measurement, contamination screening, and audit.
+<p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#difficulty-tiers">Difficulty tiers</a> | <a href="#evidence-status">Evidence status</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#reproduction">Reproduction</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
 
-## Standing
+## Abstract
 
-Empty lane. No bundle is resident, so no bundle carries a screening expiry, a retraction standing, or a measured difficulty claim. The parent ledger disposition is STALE with zero externally signed pilot proofs, and no lane content can be current before a first measurement lands.
+The curated lane of this corpus: at most 30 Harbor task bundles, every anchor seated first and every other bundle in seal order. Bundles past that ceiling live in `delivery/`.
 
-## Screening roots
+Each bundle is one Harbor task in a directory named by its content-derived uuid5, so the name doubles as an integrity check. This page is rendered from the resident bundles on every reconcile; a value a bundle does not carry reads `absent`, and the page never fills one in.
 
-The roots that any resident bundle would be screened against are pinned in the parent project's memory harness, not here, and a bundle records the effective root digests it was measured against in its own provenance carrier. The four screening roots are the exclusion list, the freeze-date table, the near-duplicate index, and the source-attestation trust root. At genesis these are TEST roots, so no bundle may be promoted into this lane on their authority.
+## Summary
+
+| Property | Value |
+| --- | --- |
+| Bundles | 0 of 30 |
+| Sealed | 0 of 0 |
+| Registrations | none |
+| Audit verdicts | none |
+| Harbor schema | none |
+
+## Difficulty tiers
+
+Difficulty is measured by the signed pilot alone and never declared in a bundle, so this page states no tier a bundle claims.
+
+## Evidence status
+
+The verdict is the audit outcome recorded at the sealed digest, and `none` means no verdict has landed for that digest yet. Only an authoring run removes a bundle from this lane, so removal waits for the next one.
+
+## Coverage
+
+No resident bundle declares a keyword.
+
+## Dataset structure
+
+No bundle is resident under `samples/`.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#131a33","primaryTextColor":"#e8ecff","primaryBorderColor":"#845EF7","lineColor":"#22d3ee","fontFamily":"monospace"}}}%%
+flowchart LR
+    staging["staging/"]
+    staging --> samples["samples/<br/>0 of 30"]
+    samples --> delivery["delivery/<br/>0 of 10000"]
+    delivery --> stock["stock/<br/>0 of 10000"]
+```
+
+## Verification and quality assurance
+
+Each bundle's signed provenance carrier holds its screening roots, screening instant, and absolute expiry. Placement moves that carrier into the private derivation set, which this page never reads, so reconcile lists no root it cannot verify here.
+
+## Reproduction
+
+Each bundle directory is a complete Harbor task: `task.toml` is the runner manifest, `instruction.md` the objective, `environment/` the sandbox image, and `tests/` the verifier. Point a Harbor runner at one bundle directory to reproduce it; `solution/` stays private.
+
+## Cite
+
+```bibtex
+@misc{marcella2026,
+  title        = {Marcella: Terminal-Bench Science 0.1 as a Hardened Reinforcement-Learning Evaluation Environment},
+  author       = {Ethara.AI},
+  year         = {2026},
+  note         = {Wraps Terminal-Bench Science 0.1 (Harbor dataset terminal-bench-science/terminal-bench-science, 70 tasks, Apache-2.0). Harness pinned at commit 6e60de2f32727c095aac498f17c1863ef4b58181. Disposition: STALE, zero signed pilots.}
+}
+```
+
+## License
+
+Code is released under the [MIT License](LICENSE). Environment specifications are released under CC-BY-4.0. The wrapped benchmark (Terminal-Bench Science 0.1) retains its original Apache-2.0 license.
+
+*Copyright 2026 Ethara.AI*
+
+## Contact
+
+Security disclosures: security@ethara.ai
+
+Code of conduct matters: conduct@ethara.ai
