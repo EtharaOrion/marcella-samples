@@ -1,652 +1,534 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<!-- Marcella hero art: the starlight-astronomer. Original vector illustration. -->
 <defs>
-  <!-- BACKGROUND -->
-  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#07070e"/>
-    <stop offset="55%" stop-color="#0b1018"/>
-    <stop offset="100%" stop-color="#160700"/>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#04061a"/>
+    <stop offset="0.42" stop-color="#0a0f33"/>
+    <stop offset="0.8" stop-color="#171d57"/>
+    <stop offset="1" stop-color="#0d1233"/>
   </linearGradient>
-  <!-- FORGE GLOW warm lower-left -->
-  <radialGradient id="fg" cx="22%" cy="90%" r="58%">
-    <stop offset="0%" stop-color="#ff5500" stop-opacity="0.50"/>
-    <stop offset="40%" stop-color="#cc2800" stop-opacity="0.20"/>
-    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  <radialGradient id="glowV" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#5b3fa8" stop-opacity="0.5"/>
+    <stop offset="0.55" stop-color="#3d2f8f" stop-opacity="0.16"/>
+    <stop offset="1" stop-color="#3d2f8f" stop-opacity="0"/>
   </radialGradient>
-  <!-- CRIMSON ATMOSPHERE upper center -->
-  <radialGradient id="ca" cx="50%" cy="30%" r="48%">
-    <stop offset="0%" stop-color="#880010" stop-opacity="0.22"/>
-    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  <radialGradient id="glowI" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#3038a6" stop-opacity="0.6"/>
+    <stop offset="1" stop-color="#3038a6" stop-opacity="0"/>
   </radialGradient>
-  <!-- BRONZE WARM (forge-lit left face) -->
-  <linearGradient id="bw" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#ff9940"/>
-    <stop offset="35%" stop-color="#c07828"/>
-    <stop offset="100%" stop-color="#562808"/>
-  </linearGradient>
-  <!-- BRONZE NEUTRAL -->
-  <linearGradient id="bn" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#e0b050"/>
-    <stop offset="55%" stop-color="#b07030"/>
-    <stop offset="100%" stop-color="#643810"/>
-  </linearGradient>
-  <!-- BRONZE PLATE vertical -->
-  <linearGradient id="bp" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#d89840"/>
-    <stop offset="50%" stop-color="#a06828"/>
-    <stop offset="100%" stop-color="#583010"/>
-  </linearGradient>
-  <!-- STEEL BLADE -->
-  <linearGradient id="sb" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#b0b8c4"/>
-    <stop offset="28%" stop-color="#e4e8f0"/>
-    <stop offset="65%" stop-color="#9098a8"/>
-    <stop offset="100%" stop-color="#283038"/>
-  </linearGradient>
-  <!-- SKIN FORGE-LIT left warm right cool -->
-  <linearGradient id="sk" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#e09858"/>
-    <stop offset="50%" stop-color="#c07840"/>
-    <stop offset="100%" stop-color="#784020"/>
-  </linearGradient>
-  <!-- APRON linen -->
-  <linearGradient id="ap" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#eeebe2"/>
-    <stop offset="60%" stop-color="#d0cbc0"/>
-    <stop offset="100%" stop-color="#b0a898"/>
-  </linearGradient>
-  <!-- HAIR dark auburn -->
-  <linearGradient id="hr" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#6a3808"/>
-    <stop offset="100%" stop-color="#1c0a02"/>
-  </linearGradient>
-  <!-- STONE PILLAR -->
-  <linearGradient id="st" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#1c1c2a"/>
-    <stop offset="100%" stop-color="#0a0a14"/>
-  </linearGradient>
-  <!-- FLASK INTERIOR emerald glow -->
-  <radialGradient id="fi" cx="38%" cy="40%" r="65%">
-    <stop offset="0%" stop-color="#aaffcc"/>
-    <stop offset="45%" stop-color="#00cc66"/>
-    <stop offset="100%" stop-color="#003320"/>
+  <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#fff1c1" stop-opacity="0.85"/>
+    <stop offset="0.22" stop-color="#f5c451" stop-opacity="0.45"/>
+    <stop offset="0.6" stop-color="#d9a03a" stop-opacity="0.1"/>
+    <stop offset="1" stop-color="#d9a03a" stop-opacity="0"/>
   </radialGradient>
-  <!-- FLASK GLOW AURA -->
-  <radialGradient id="fa" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#00ff88" stop-opacity="0.55"/>
-    <stop offset="55%" stop-color="#00cc55" stop-opacity="0.20"/>
-    <stop offset="100%" stop-color="#009933" stop-opacity="0"/>
+  <radialGradient id="emberG" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#ffb35c" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="#ff7a2a" stop-opacity="0"/>
   </radialGradient>
-  <!-- CRIMSON PLUME -->
-  <linearGradient id="cp" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#e8102a"/>
-    <stop offset="100%" stop-color="#8b0000"/>
-  </linearGradient>
-  <!-- MOLTEN METAL crucible -->
-  <radialGradient id="mm" cx="50%" cy="25%" r="70%">
-    <stop offset="0%" stop-color="#ffee40"/>
-    <stop offset="30%" stop-color="#ff8800"/>
-    <stop offset="70%" stop-color="#cc2800"/>
-    <stop offset="100%" stop-color="#660000"/>
+  <radialGradient id="cglow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#f5a142" stop-opacity="0.38"/>
+    <stop offset="1" stop-color="#f5a142" stop-opacity="0"/>
   </radialGradient>
-  <!-- ANVIL STEEL -->
-  <linearGradient id="av" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#48485a"/>
-    <stop offset="100%" stop-color="#1a1a28"/>
+  <linearGradient id="cloak" x1="1" y1="0" x2="0.1" y2="1">
+    <stop offset="0" stop-color="#323aa6"/>
+    <stop offset="0.35" stop-color="#1f2569"/>
+    <stop offset="1" stop-color="#090c2c"/>
   </linearGradient>
-  <!-- TITLE GLOW filter -->
-  <filter id="tg" x="-15%" y="-60%" width="130%" height="220%">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="b"/>
-    <feFlood flood-color="#cc001a" flood-opacity="0.75" result="c"/>
-    <feComposite in="c" in2="b" operator="in" result="s"/>
-    <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <!-- GLYPH GLOW filter -->
-  <filter id="gg" x="-40%" y="-40%" width="180%" height="180%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <!-- FLASK LIGHT soft bloom -->
-  <filter id="fl" x="-80%" y="-80%" width="260%" height="260%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <!-- DROP SHADOW -->
-  <filter id="ds" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.65"/>
-  </filter>
+  <linearGradient id="sleeve" x1="0.9" y1="0" x2="0.1" y2="1">
+    <stop offset="0" stop-color="#3d46b4"/>
+    <stop offset="0.5" stop-color="#212772"/>
+    <stop offset="1" stop-color="#0c1036"/>
+  </linearGradient>
+  <linearGradient id="hood" x1="1" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3c44b0"/>
+    <stop offset="0.45" stop-color="#1d2366"/>
+    <stop offset="1" stop-color="#080b28"/>
+  </linearGradient>
+  <linearGradient id="cape" x1="0.9" y1="0" x2="0.2" y2="1">
+    <stop offset="0" stop-color="#3a42ab"/>
+    <stop offset="0.5" stop-color="#232a78"/>
+    <stop offset="1" stop-color="#11154a"/>
+  </linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1c1630"/>
+    <stop offset="0.55" stop-color="#4a3149"/>
+    <stop offset="1" stop-color="#a06e5a"/>
+  </linearGradient>
+  <linearGradient id="visorShade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#05061a" stop-opacity="0.9"/>
+    <stop offset="0.3" stop-color="#05061a" stop-opacity="0"/>
+    <stop offset="1" stop-color="#05061a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="brass" cx="0.38" cy="0.32" r="0.75">
+    <stop offset="0" stop-color="#fff3c4"/>
+    <stop offset="0.4" stop-color="#f5c451"/>
+    <stop offset="0.8" stop-color="#c3841f"/>
+    <stop offset="1" stop-color="#7a4c12"/>
+  </radialGradient>
+  <radialGradient id="plate" cx="0.42" cy="0.38" r="0.7">
+    <stop offset="0" stop-color="#ecb44c"/>
+    <stop offset="0.6" stop-color="#b47a22"/>
+    <stop offset="1" stop-color="#6b4512"/>
+  </radialGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6d76ad"/>
+    <stop offset="0.35" stop-color="#3d457d"/>
+    <stop offset="1" stop-color="#1b2050"/>
+  </linearGradient>
+  <linearGradient id="slate" x1="0.8" y1="0" x2="0.2" y2="1">
+    <stop offset="0" stop-color="#2c3372"/>
+    <stop offset="1" stop-color="#10143a"/>
+  </linearGradient>
+  <linearGradient id="iron" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1a1426"/>
+    <stop offset="0.6" stop-color="#3a2c48"/>
+    <stop offset="1" stop-color="#5a3a3a"/>
+  </linearGradient>
+  <radialGradient id="molten" cx="0.45" cy="0.4" r="0.6">
+    <stop offset="0" stop-color="#fff7d6"/>
+    <stop offset="0.35" stop-color="#ffd36b"/>
+    <stop offset="0.8" stop-color="#f08a2c"/>
+    <stop offset="1" stop-color="#b8461a"/>
+  </radialGradient>
+  <linearGradient id="titleG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff6d2"/>
+    <stop offset="0.55" stop-color="#f5c451"/>
+    <stop offset="1" stop-color="#b8812a"/>
+  </linearGradient>
+  <linearGradient id="ruleL" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f5c451" stop-opacity="0"/>
+    <stop offset="1" stop-color="#f5c451" stop-opacity="0.9"/>
+  </linearGradient>
+  <linearGradient id="ruleR" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f5c451" stop-opacity="0.9"/>
+    <stop offset="1" stop-color="#f5c451" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="coping" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2d3478"/>
+    <stop offset="1" stop-color="#151a48"/>
+  </linearGradient>
+  <linearGradient id="copingLight" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f5c451" stop-opacity="0"/>
+    <stop offset="0.6" stop-color="#f5c451" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#f5c451" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="b2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+  <filter id="b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="b14" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+  <clipPath id="frontHalf"><rect x="-600" y="0" width="1200" height="300"/></clipPath>
 </defs>
 
-<!-- ================================ -->
-<!-- LAYER 1: BACKGROUND + ATMOSPHERE -->
-<!-- ================================ -->
-<rect width="1200" height="800" fill="url(#bg)"/>
-<rect width="1200" height="800" fill="url(#fg)"/>
-<rect width="1200" height="800" fill="url(#ca)"/>
+<!-- SKY -->
+<rect width="1200" height="800" fill="url(#sky)"/>
+<ellipse cx="900" cy="200" rx="420" ry="250" fill="url(#glowV)"/>
+<ellipse cx="580" cy="430" rx="320" ry="300" fill="url(#glowI)"/>
+<ellipse cx="230" cy="260" rx="260" ry="200" fill="url(#glowV)" opacity="0.6"/>
+<ellipse cx="600" cy="330" rx="640" ry="70" fill="#9aa3ff" opacity="0.05" transform="rotate(-16 600 330)" filter="url(#b14)"/>
+<circle cx="763.8" cy="532.6" r="0.91" fill="#b9c2ff" opacity="0.90"/>
+<circle cx="161.4" cy="98.2" r="0.71" fill="#b9c2ff" opacity="0.82"/>
+<circle cx="243.7" cy="311.2" r="0.57" fill="#eef1ff" opacity="0.64"/>
+<circle cx="916.4" cy="310.8" r="0.64" fill="#eef1ff" opacity="0.67"/>
+<circle cx="47.4" cy="462.5" r="0.62" fill="#eef1ff" opacity="0.43"/>
+<circle cx="175.3" cy="516.8" r="1.12" fill="#eef1ff" opacity="0.61"/>
+<circle cx="439.5" cy="339.6" r="1.60" fill="#b9c2ff" opacity="0.83"/>
+<circle cx="632.6" cy="169.5" r="0.51" fill="#eef1ff" opacity="0.73"/>
+<circle cx="486.7" cy="122.5" r="0.50" fill="#b9c2ff" opacity="0.38"/>
+<circle cx="356.4" cy="588.2" r="0.67" fill="#ffe9a8" opacity="0.50"/>
+<circle cx="825.4" cy="498.5" r="1.07" fill="#eef1ff" opacity="0.67"/>
+<circle cx="166.6" cy="197.0" r="1.90" fill="#eef1ff" opacity="0.51"/>
+<circle cx="1008.2" cy="421.5" r="1.49" fill="#ffe9a8" opacity="0.81"/>
+<circle cx="581.2" cy="135.4" r="1.37" fill="#ffe9a8" opacity="0.65"/>
+<circle cx="302.2" cy="113.9" r="0.65" fill="#eef1ff" opacity="0.43"/>
+<circle cx="212.0" cy="243.5" r="0.52" fill="#eef1ff" opacity="0.69"/>
+<circle cx="596.6" cy="328.5" r="0.93" fill="#eef1ff" opacity="0.62"/>
+<circle cx="1027.3" cy="395.6" r="1.52" fill="#ffe9a8" opacity="0.89"/>
+<circle cx="931.8" cy="105.1" r="1.66" fill="#eef1ff" opacity="0.82"/>
+<circle cx="890.1" cy="320.8" r="0.60" fill="#eef1ff" opacity="0.58"/>
+<circle cx="358.8" cy="195.8" r="0.50" fill="#b9c2ff" opacity="0.77"/>
+<circle cx="449.1" cy="139.2" r="1.07" fill="#eef1ff" opacity="0.54"/>
+<circle cx="619.5" cy="195.7" r="1.15" fill="#eef1ff" opacity="0.40"/>
+<circle cx="833.6" cy="119.0" r="0.69" fill="#eef1ff" opacity="0.59"/>
+<circle cx="487.0" cy="388.5" r="0.84" fill="#ffe9a8" opacity="0.81"/>
+<circle cx="301.4" cy="472.8" r="0.64" fill="#eef1ff" opacity="0.42"/>
+<circle cx="836.7" cy="504.3" r="1.76" fill="#eef1ff" opacity="0.70"/>
+<circle cx="930.1" cy="24.9" r="0.51" fill="#eef1ff" opacity="0.61"/>
+<circle cx="426.1" cy="443.6" r="1.79" fill="#eef1ff" opacity="0.75"/>
+<circle cx="988.5" cy="277.7" r="0.51" fill="#eef1ff" opacity="0.93"/>
+<circle cx="1078.7" cy="266.7" r="0.75" fill="#eef1ff" opacity="0.68"/>
+<circle cx="964.1" cy="249.4" r="1.10" fill="#eef1ff" opacity="0.86"/>
+<circle cx="66.7" cy="677.6" r="1.41" fill="#eef1ff" opacity="0.81"/>
+<circle cx="8.7" cy="242.5" r="0.53" fill="#eef1ff" opacity="0.81"/>
+<circle cx="295.9" cy="239.4" r="0.94" fill="#eef1ff" opacity="0.63"/>
+<circle cx="217.4" cy="361.9" r="1.46" fill="#eef1ff" opacity="0.60"/>
+<circle cx="654.4" cy="119.4" r="0.50" fill="#eef1ff" opacity="0.85"/>
+<circle cx="501.2" cy="644.2" r="1.80" fill="#b9c2ff" opacity="0.43"/>
+<circle cx="525.2" cy="234.8" r="0.87" fill="#b9c2ff" opacity="0.50"/>
+<circle cx="842.2" cy="217.9" r="0.53" fill="#b9c2ff" opacity="0.68"/>
+<circle cx="844.1" cy="143.4" r="1.13" fill="#b9c2ff" opacity="0.60"/>
+<circle cx="1073.5" cy="73.2" r="1.33" fill="#eef1ff" opacity="0.87"/>
+<circle cx="1143.7" cy="244.1" r="1.26" fill="#eef1ff" opacity="0.47"/>
+<circle cx="179.7" cy="302.0" r="0.50" fill="#eef1ff" opacity="0.89"/>
+<circle cx="677.4" cy="626.5" r="1.04" fill="#ffe9a8" opacity="0.38"/>
+<circle cx="71.7" cy="15.1" r="0.65" fill="#b9c2ff" opacity="0.86"/>
+<circle cx="1140.1" cy="446.2" r="1.87" fill="#eef1ff" opacity="0.73"/>
+<circle cx="41.2" cy="371.1" r="1.82" fill="#eef1ff" opacity="0.74"/>
+<circle cx="192.4" cy="95.1" r="0.67" fill="#eef1ff" opacity="0.90"/>
+<circle cx="1043.8" cy="72.7" r="0.52" fill="#ffe9a8" opacity="0.75"/>
+<circle cx="611.8" cy="546.9" r="0.50" fill="#eef1ff" opacity="0.72"/>
+<circle cx="196.6" cy="556.2" r="1.01" fill="#ffe9a8" opacity="0.80"/>
+<circle cx="298.1" cy="226.3" r="2.00" fill="#eef1ff" opacity="0.74"/>
+<circle cx="1018.8" cy="311.9" r="0.53" fill="#eef1ff" opacity="0.90"/>
+<circle cx="1052.3" cy="491.2" r="0.53" fill="#b9c2ff" opacity="0.46"/>
+<circle cx="880.0" cy="395.5" r="0.57" fill="#eef1ff" opacity="0.56"/>
+<circle cx="344.6" cy="297.6" r="1.47" fill="#b9c2ff" opacity="0.69"/>
+<circle cx="274.5" cy="73.0" r="1.87" fill="#eef1ff" opacity="0.78"/>
+<circle cx="1039.1" cy="105.4" r="0.84" fill="#ffe9a8" opacity="0.93"/>
+<circle cx="864.0" cy="402.4" r="1.86" fill="#ffe9a8" opacity="0.86"/>
+<circle cx="1179.5" cy="377.6" r="0.80" fill="#eef1ff" opacity="0.61"/>
+<circle cx="530.2" cy="548.8" r="0.53" fill="#eef1ff" opacity="0.63"/>
+<circle cx="995.5" cy="29.5" r="1.00" fill="#eef1ff" opacity="0.58"/>
+<circle cx="143.2" cy="544.4" r="1.91" fill="#eef1ff" opacity="0.52"/>
+<circle cx="1015.2" cy="216.1" r="1.52" fill="#b9c2ff" opacity="0.80"/>
+<circle cx="246.7" cy="489.4" r="1.37" fill="#eef1ff" opacity="0.57"/>
+<circle cx="1064.8" cy="377.4" r="1.20" fill="#eef1ff" opacity="0.90"/>
+<circle cx="144.9" cy="23.9" r="1.57" fill="#eef1ff" opacity="0.78"/>
+<circle cx="202.6" cy="240.0" r="0.77" fill="#b9c2ff" opacity="0.74"/>
+<circle cx="1037.5" cy="346.9" r="0.74" fill="#eef1ff" opacity="0.71"/>
+<circle cx="993.7" cy="369.8" r="0.99" fill="#eef1ff" opacity="0.44"/>
+<circle cx="277.3" cy="156.3" r="0.51" fill="#eef1ff" opacity="0.81"/>
+<circle cx="1163.5" cy="357.6" r="0.62" fill="#b9c2ff" opacity="0.82"/>
+<circle cx="492.8" cy="354.8" r="0.61" fill="#eef1ff" opacity="0.54"/>
+<circle cx="518.1" cy="158.2" r="0.71" fill="#eef1ff" opacity="0.82"/>
+<circle cx="786.7" cy="132.8" r="0.91" fill="#eef1ff" opacity="0.71"/>
+<circle cx="838.3" cy="322.6" r="1.75" fill="#eef1ff" opacity="0.84"/>
+<circle cx="43.2" cy="125.4" r="0.61" fill="#eef1ff" opacity="0.58"/>
+<circle cx="511.8" cy="148.7" r="1.63" fill="#eef1ff" opacity="0.37"/>
+<circle cx="455.7" cy="334.9" r="0.81" fill="#ffe9a8" opacity="0.47"/>
+<circle cx="1149.9" cy="213.2" r="1.41" fill="#b9c2ff" opacity="0.60"/>
+<circle cx="20.6" cy="564.7" r="0.85" fill="#eef1ff" opacity="0.61"/>
+<circle cx="1049.8" cy="355.3" r="0.54" fill="#ffe9a8" opacity="0.66"/>
+<circle cx="1187.1" cy="123.5" r="0.53" fill="#eef1ff" opacity="0.89"/>
+<circle cx="953.3" cy="359.5" r="1.48" fill="#b9c2ff" opacity="0.67"/>
+<circle cx="641.4" cy="278.1" r="0.82" fill="#b9c2ff" opacity="0.67"/>
+<circle cx="1171.9" cy="362.5" r="1.82" fill="#eef1ff" opacity="0.85"/>
+<circle cx="650.0" cy="540.7" r="1.30" fill="#b9c2ff" opacity="0.70"/>
+<circle cx="1127.4" cy="285.5" r="1.86" fill="#b9c2ff" opacity="0.49"/>
+<circle cx="65.9" cy="314.5" r="0.92" fill="#eef1ff" opacity="0.82"/>
+<circle cx="476.0" cy="564.4" r="0.68" fill="#eef1ff" opacity="0.83"/>
+<circle cx="866.3" cy="276.9" r="0.84" fill="#ffe9a8" opacity="0.62"/>
+<circle cx="926.7" cy="237.5" r="0.50" fill="#b9c2ff" opacity="0.73"/>
+<circle cx="871.5" cy="313.1" r="0.94" fill="#b9c2ff" opacity="0.92"/>
+<circle cx="92.2" cy="414.8" r="0.87" fill="#b9c2ff" opacity="0.67"/>
+<circle cx="1043.6" cy="197.8" r="1.91" fill="#b9c2ff" opacity="0.62"/>
+<circle cx="505.2" cy="571.2" r="1.73" fill="#eef1ff" opacity="0.75"/>
+<circle cx="1121.1" cy="159.2" r="1.95" fill="#b9c2ff" opacity="0.88"/>
+<circle cx="794.9" cy="347.3" r="1.17" fill="#eef1ff" opacity="0.46"/>
+<circle cx="1082.0" cy="508.1" r="1.79" fill="#eef1ff" opacity="0.40"/>
+<circle cx="857.4" cy="386.8" r="1.37" fill="#eef1ff" opacity="0.38"/>
+<circle cx="1008.4" cy="421.3" r="1.26" fill="#b9c2ff" opacity="0.49"/>
+<circle cx="89.2" cy="608.8" r="0.77" fill="#eef1ff" opacity="0.48"/>
+<circle cx="357.3" cy="116.8" r="1.72" fill="#eef1ff" opacity="0.48"/>
+<circle cx="50.8" cy="31.3" r="0.51" fill="#b9c2ff" opacity="0.87"/>
+<circle cx="558.7" cy="430.5" r="0.52" fill="#eef1ff" opacity="0.52"/>
+<circle cx="695.3" cy="363.1" r="0.61" fill="#eef1ff" opacity="0.75"/>
+<circle cx="1083.6" cy="347.1" r="1.82" fill="#b9c2ff" opacity="0.91"/>
+<circle cx="772.5" cy="311.1" r="0.68" fill="#b9c2ff" opacity="0.45"/>
+<circle cx="611.0" cy="600.0" r="0.80" fill="#ffe9a8" opacity="0.80"/>
+<circle cx="944.8" cy="106.0" r="1.35" fill="#eef1ff" opacity="0.68"/>
+<circle cx="439.8" cy="578.3" r="1.15" fill="#b9c2ff" opacity="0.48"/>
+<circle cx="1160.7" cy="480.1" r="0.52" fill="#eef1ff" opacity="0.86"/>
+<circle cx="351.2" cy="277.6" r="0.58" fill="#eef1ff" opacity="0.59"/>
+<circle cx="995.5" cy="643.6" r="0.67" fill="#eef1ff" opacity="0.93"/>
+<circle cx="82.8" cy="283.8" r="1.11" fill="#eef1ff" opacity="0.35"/>
+<circle cx="875.2" cy="522.7" r="1.76" fill="#eef1ff" opacity="0.81"/>
+<circle cx="886.7" cy="295.9" r="1.70" fill="#ffe9a8" opacity="0.57"/>
+<circle cx="505.2" cy="561.0" r="1.07" fill="#eef1ff" opacity="0.50"/>
+<circle cx="60.1" cy="76.8" r="0.98" fill="#eef1ff" opacity="0.77"/>
+<circle cx="216.5" cy="425.5" r="1.04" fill="#eef1ff" opacity="0.40"/>
+<circle cx="969.1" cy="98.9" r="0.50" fill="#eef1ff" opacity="0.86"/>
+<circle cx="948.1" cy="478.1" r="1.22" fill="#eef1ff" opacity="0.74"/>
+<circle cx="935.4" cy="258.5" r="0.86" fill="#eef1ff" opacity="0.72"/>
+<circle cx="181.0" cy="444.6" r="1.68" fill="#eef1ff" opacity="0.40"/>
+<circle cx="151.1" cy="83.4" r="0.64" fill="#eef1ff" opacity="0.84"/>
+<circle cx="372.9" cy="295.5" r="1.79" fill="#eef1ff" opacity="0.90"/>
+<circle cx="18.4" cy="502.8" r="0.85" fill="#b9c2ff" opacity="0.55"/>
+<circle cx="159.5" cy="481.4" r="1.34" fill="#eef1ff" opacity="0.73"/>
+<circle cx="754.7" cy="393.0" r="1.05" fill="#ffe9a8" opacity="0.88"/>
+<circle cx="1136.6" cy="60.3" r="0.50" fill="#eef1ff" opacity="0.60"/>
+<circle cx="986.1" cy="388.6" r="0.50" fill="#ffe9a8" opacity="0.61"/>
+<circle cx="45.9" cy="340.4" r="0.63" fill="#eef1ff" opacity="0.91"/>
+<circle cx="232.5" cy="398.0" r="0.81" fill="#ffe9a8" opacity="0.88"/>
+<circle cx="23.0" cy="127.5" r="0.50" fill="#eef1ff" opacity="0.85"/>
+<circle cx="313.1" cy="247.6" r="1.67" fill="#eef1ff" opacity="0.44"/>
+<circle cx="957.4" cy="347.7" r="0.84" fill="#ffe9a8" opacity="0.60"/>
+<circle cx="436.5" cy="367.4" r="0.50" fill="#eef1ff" opacity="0.94"/>
+<circle cx="290.3" cy="244.9" r="0.87" fill="#eef1ff" opacity="0.93"/>
+<circle cx="132.0" cy="310.5" r="0.50" fill="#eef1ff" opacity="0.49"/>
+<circle cx="1039.0" cy="457.1" r="0.99" fill="#ffe9a8" opacity="0.80"/>
+<circle cx="371.5" cy="517.5" r="0.67" fill="#eef1ff" opacity="0.70"/>
+<circle cx="1051.7" cy="116.0" r="1.49" fill="#b9c2ff" opacity="0.85"/>
+<circle cx="151.9" cy="167.4" r="0.90" fill="#b9c2ff" opacity="0.39"/>
+<circle cx="528.7" cy="190.9" r="1.09" fill="#eef1ff" opacity="0.38"/>
+<circle cx="311.2" cy="262.7" r="0.75" fill="#b9c2ff" opacity="0.82"/>
+<circle cx="301.0" cy="376.4" r="0.80" fill="#eef1ff" opacity="0.42"/>
+<circle cx="63.5" cy="398.5" r="1.21" fill="#eef1ff" opacity="0.89"/>
+<circle cx="383.4" cy="229.0" r="1.46" fill="#eef1ff" opacity="0.74"/>
+<circle cx="1112.1" cy="11.6" r="0.60" fill="#b9c2ff" opacity="0.79"/>
 
-<!-- ================================ -->
-<!-- LAYER 2: ARCHITECTURE            -->
-<!-- ================================ -->
-<!-- Vault arch ceiling -->
-<path d="M 0 0 L 0 225 Q 600 55 1200 225 L 1200 0 Z" fill="#07070e"/>
-<path d="M 70 0 L 70 210 Q 600 75 1130 210 L 1130 0 Z" fill="none" stroke="#181828" stroke-width="2"/>
-<!-- Arch keystone -->
-<path d="M 585 70 L 600 56 L 615 70 L 610 84 L 590 84 Z" fill="#161624" stroke="#242434" stroke-width="1"/>
-
-<!-- Left stone pillar -->
-<rect x="55" y="0" width="92" height="800" fill="url(#st)"/>
-<rect x="55" y="0" width="14" height="800" fill="#ff5500" opacity="0.13"/>
-<line x1="82" y1="0" x2="82" y2="800" stroke="#141420" stroke-width="1.5"/>
-<line x1="108" y1="0" x2="108" y2="800" stroke="#1c1c2c" stroke-width="1"/>
-<line x1="132" y1="0" x2="132" y2="800" stroke="#101018" stroke-width="0.8"/>
-<rect x="50" y="0" width="102" height="28" fill="#161624" stroke="#222232" stroke-width="1"/>
-
-<!-- Right stone pillar -->
-<rect x="1053" y="0" width="92" height="800" fill="url(#st)"/>
-<line x1="1070" y1="0" x2="1070" y2="800" stroke="#141420" stroke-width="1.5"/>
-<line x1="1096" y1="0" x2="1096" y2="800" stroke="#1c1c2c" stroke-width="1"/>
-<line x1="1120" y1="0" x2="1120" y2="800" stroke="#101018" stroke-width="0.8"/>
-<rect x="1048" y="0" width="102" height="28" fill="#161624" stroke="#222232" stroke-width="1"/>
-
-<!-- Floor stone -->
-<rect x="0" y="714" width="1200" height="86" fill="#08080f"/>
-<rect x="0" y="712" width="1200" height="4" fill="#1c1c2c"/>
-<line x1="0" y1="738" x2="1200" y2="738" stroke="#111120" stroke-width="1.5"/>
-<line x1="0" y1="760" x2="1200" y2="760" stroke="#0c0c18" stroke-width="1"/>
-<line x1="300" y1="714" x2="300" y2="800" stroke="#0c0c18" stroke-width="1"/>
-<line x1="600" y1="714" x2="600" y2="800" stroke="#131320" stroke-width="1.5"/>
-<line x1="900" y1="714" x2="900" y2="800" stroke="#0c0c18" stroke-width="1"/>
-
-<!-- Forge heat on floor lower-left -->
-<ellipse cx="268" cy="716" rx="235" ry="50" fill="#ff4400" opacity="0.24"/>
-<ellipse cx="268" cy="716" rx="145" ry="32" fill="#ff7700" opacity="0.28"/>
-<ellipse cx="268" cy="716" rx="68" ry="16" fill="#ffaa00" opacity="0.38"/>
-
-<!-- ================================ -->
-<!-- LAYER 3: BACKGROUND GLYPHS      -->
-<!-- ================================ -->
-
-<!-- CRYSTAL LATTICE upper background steel-blue faint -->
-<g opacity="0.22" fill="none" stroke="#8898b0" stroke-width="1" transform="translate(448,80)">
-  <circle cx="60" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="120" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="180" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="240" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="300" cy="0" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="60" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="120" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="180" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="240" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="300" cy="54" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="60" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="120" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="180" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="240" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
-  <circle cx="300" cy="108" r="3.5" fill="#8898b0" stroke="none"/>
-  <line x1="60" y1="0" x2="120" y2="0"/><line x1="120" y1="0" x2="180" y2="0"/>
-  <line x1="180" y1="0" x2="240" y2="0"/><line x1="240" y1="0" x2="300" y2="0"/>
-  <line x1="60" y1="54" x2="120" y2="54"/><line x1="120" y1="54" x2="180" y2="54"/>
-  <line x1="180" y1="54" x2="240" y2="54"/><line x1="240" y1="54" x2="300" y2="54"/>
-  <line x1="60" y1="108" x2="120" y2="108"/><line x1="120" y1="108" x2="180" y2="108"/>
-  <line x1="180" y1="108" x2="240" y2="108"/><line x1="240" y1="108" x2="300" y2="108"/>
-  <line x1="60" y1="0" x2="60" y2="54"/><line x1="120" y1="0" x2="120" y2="54"/>
-  <line x1="180" y1="0" x2="180" y2="54"/><line x1="240" y1="0" x2="240" y2="54"/>
-  <line x1="300" y1="0" x2="300" y2="54"/>
-  <line x1="60" y1="54" x2="60" y2="108"/><line x1="120" y1="54" x2="120" y2="108"/>
-  <line x1="180" y1="54" x2="180" y2="108"/><line x1="240" y1="54" x2="240" y2="108"/>
-  <line x1="300" y1="54" x2="300" y2="108"/>
-  <line x1="60" y1="0" x2="90" y2="-24" stroke-dasharray="3,4"/>
-  <line x1="120" y1="0" x2="150" y2="-24" stroke-dasharray="3,4"/>
-  <line x1="180" y1="0" x2="210" y2="-24" stroke-dasharray="3,4"/>
-  <line x1="240" y1="0" x2="270" y2="-24" stroke-dasharray="3,4"/>
-  <line x1="300" y1="0" x2="330" y2="-24" stroke-dasharray="3,4"/>
-  <line x1="60" y1="54" x2="90" y2="30" stroke-dasharray="3,4"/>
-  <line x1="120" y1="54" x2="150" y2="30" stroke-dasharray="3,4"/>
-  <line x1="180" y1="54" x2="210" y2="30" stroke-dasharray="3,4"/>
-  <line x1="240" y1="54" x2="270" y2="30" stroke-dasharray="3,4"/>
-  <line x1="300" y1="54" x2="330" y2="30" stroke-dasharray="3,4"/>
+<g fill="#fff6d8">
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(196 140)" opacity="0.9"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(1104 318) scale(0.8)" opacity="0.85"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(462 172) scale(0.65)" opacity="0.8"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(884 430) scale(0.55)" opacity="0.7"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(98 420) scale(0.6)" opacity="0.75"/>
 </g>
 
-<!-- WAVEFORM upper-right background mathematical-signal science -->
-<g transform="translate(622,142)" opacity="0.48" filter="url(#gg)">
-  <path d="M 0 26 C 16 6 34 6 50 26 C 66 46 84 46 100 26 C 116 6 134 6 150 26 C 166 46 184 46 200 26 C 216 6 234 6 250 26 C 266 46 284 46 300 26 C 316 6 334 6 350 26"
-        fill="none" stroke="#dc143c" stroke-width="2.5"/>
-  <line x1="-8" y1="26" x2="358" y2="26" stroke="#440010" stroke-width="0.8" stroke-dasharray="4,5"/>
-  <text x="362" y="30" font-family="serif" font-size="12" fill="#aa0010" opacity="0.7">Hz</text>
+<!-- GOTHIC ARCH TRACERY AT THE EDGES -->
+<g fill="none" stroke="#283078" stroke-width="2.2" opacity="0.85">
+  <path d="M28 688 L28 292 Q28 198 92 150 Q156 198 156 292 L156 688"/>
+  <path d="M40 688 L40 296 Q40 212 92 168 Q144 212 144 296 L144 688" opacity="0.55"/>
+  <line x1="92" y1="306" x2="92" y2="688" opacity="0.55"/>
+  <circle cx="92" cy="258" r="20" opacity="0.6"/>
+</g>
+<g fill="none" stroke="#283078" stroke-width="2.2" opacity="0.85" transform="translate(1200 0) scale(-1 1)">
+  <path d="M28 688 L28 292 Q28 198 92 150 Q156 198 156 292 L156 688"/>
+  <path d="M40 688 L40 296 Q40 212 92 168 Q144 212 144 296 L144 688" opacity="0.55"/>
+  <line x1="92" y1="306" x2="92" y2="688" opacity="0.55"/>
+  <circle cx="92" cy="258" r="20" opacity="0.6"/>
 </g>
 
-<!-- ================================ -->
-<!-- LAYER 4: MIDGROUND GLYPHS       -->
-<!-- ================================ -->
+<!-- ASTROLABE HALO -->
+<circle cx="724" cy="220" r="122" fill="url(#halo)"/>
 
-<!-- DNA DOUBLE HELIX left side life science -->
-<g transform="translate(166,200)" filter="url(#gg)" opacity="0.92">
-  <!-- Strand A crimson starts right x=48 winds to left x=4 and back -->
-  <path d="M 48 0 C 48 22 4 42 4 64 C 4 86 48 106 48 128 C 48 150 4 170 4 192
-           C 4 214 48 234 48 256 C 48 278 4 298 4 320 C 4 342 48 362 48 384
-           C 48 406 4 426 4 448"
-        fill="none" stroke="#dc143c" stroke-width="3.2"/>
-  <!-- Strand B bronze starts left x=4 opposite phase -->
-  <path d="M 4 0 C 4 22 48 42 48 64 C 48 86 4 106 4 128 C 4 150 48 170 48 192
-           C 48 214 4 234 4 256 C 4 278 48 298 48 320 C 48 342 4 362 4 384
-           C 4 406 48 426 48 448"
-        fill="none" stroke="#b87832" stroke-width="3.2"/>
-  <!-- Rungs at peaks y=0,64,128,192,256,320,384,448 -->
-  <line x1="4" y1="0" x2="48" y2="0" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="64" x2="48" y2="64" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="128" x2="48" y2="128" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="192" x2="48" y2="192" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="256" x2="48" y2="256" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="320" x2="48" y2="320" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="384" x2="48" y2="384" stroke="#7a8898" stroke-width="2.2"/>
-  <line x1="4" y1="448" x2="48" y2="448" stroke="#7a8898" stroke-width="2.2"/>
-  <!-- Crossing nodes at midpoints y=32,96,160,224,288,352,416 -->
-  <circle cx="26" cy="32" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="96" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="160" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="224" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="288" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="352" r="3.5" fill="#8090a4"/>
-  <circle cx="26" cy="416" r="3.5" fill="#8090a4"/>
-  <text x="26" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="12"
-        fill="#dc143c" letter-spacing="3" opacity="0.75">DNA</text>
+<!-- CASSIOPEIA, READ AS AN M -->
+<polyline points="850,190 892,128 938,170 982,118 1026,182" fill="none" stroke="#f5c451" stroke-width="1.4" stroke-opacity="0.55" stroke-linejoin="round"/>
+<g fill="#f5c451" opacity="0.5" filter="url(#b2)">
+  <circle cx="850" cy="190" r="6"/><circle cx="892" cy="128" r="6"/><circle cx="938" cy="170" r="6"/><circle cx="982" cy="118" r="7"/><circle cx="1026" cy="182" r="6"/>
+</g>
+<g fill="#fff6d8">
+  <circle cx="850" cy="190" r="2.8"/><circle cx="892" cy="128" r="3"/><circle cx="938" cy="170" r="2.8"/><circle cx="982" cy="118" r="3.4"/><circle cx="1026" cy="182" r="2.8"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(982 118) scale(1.1)"/>
+</g>
+<line x1="786" y1="205" x2="926" y2="173" stroke="#f5c451" stroke-width="1.2" stroke-dasharray="3 7" stroke-opacity="0.5"/>
+
+<!-- ORBITAL RINGS, BACK -->
+<g transform="translate(600 470) rotate(-8)" fill="none">
+  <ellipse rx="420" ry="90" stroke="#d9a03a" stroke-width="1.6" stroke-opacity="0.45"/>
+  <circle cx="-210" cy="-77.9" r="17" fill="#e0563b" opacity="0.35" filter="url(#b5)"/>
+  <circle cx="-210" cy="-77.9" r="9" fill="#e0563b"/>
+  <circle cx="-207.6" cy="-80.5" r="4.5" fill="#ff9a6b" opacity="0.85"/>
+</g>
+<g transform="translate(600 548) rotate(-4)" fill="none">
+  <ellipse rx="270" ry="52" stroke="#f5c451" stroke-width="1.8" stroke-opacity="0.5"/>
 </g>
 
-<!-- ATOMIC ORBITAL DIAGRAM right side physical science -->
-<g transform="translate(908,200)" filter="url(#gg)" opacity="0.88">
-  <!-- Ambient aura -->
-  <circle cx="90" cy="122" r="88" fill="#8b0000" opacity="0.06"/>
-  <!-- Nucleus -->
-  <circle cx="90" cy="122" r="15" fill="#c07820"/>
-  <circle cx="90" cy="122" r="9" fill="#e8b048"/>
-  <circle cx="86" cy="118" r="3.5" fill="#cc1020"/>
-  <circle cx="94" cy="118" r="3.5" fill="#7a9aac"/>
-  <circle cx="86" cy="126" r="3.5" fill="#cc1020"/>
-  <circle cx="94" cy="126" r="3.5" fill="#7a9aac"/>
-  <!-- Orbit 1 circular -->
-  <ellipse cx="90" cy="122" rx="54" ry="54" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7"/>
-  <circle cx="144" cy="122" r="5.5" fill="#90b8d8"/>
-  <circle cx="144" cy="122" r="2.5" fill="#d8f0ff"/>
-  <!-- Orbit 2 tilted -52 degrees -->
-  <ellipse cx="90" cy="122" rx="80" ry="28" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7" transform="rotate(-52 90 122)"/>
-  <circle cx="90" cy="46" r="5.5" fill="#90b8d8" transform="rotate(-52 90 122)"/>
-  <circle cx="90" cy="46" r="2.5" fill="#d8f0ff" transform="rotate(-52 90 122)"/>
-  <!-- Orbit 3 tilted +52 degrees -->
-  <ellipse cx="90" cy="122" rx="80" ry="28" fill="none" stroke="#607080" stroke-width="1.3" opacity="0.7" transform="rotate(52 90 122)"/>
-  <circle cx="90" cy="46" r="5.5" fill="#90b8d8" transform="rotate(52 90 122)"/>
-  <circle cx="90" cy="46" r="2.5" fill="#d8f0ff" transform="rotate(52 90 122)"/>
-  <text x="90" y="218" text-anchor="middle" font-family="Georgia, serif" font-size="12"
-        fill="#b87832" letter-spacing="3" opacity="0.75">ATOM</text>
+<!-- RAISED ARM: UPPER ARM (BEHIND THE HOOD), SLEEVE AT THE ELBOW, FOREARM -->
+<path d="M643.8 181.9 C662 168 684 151 701.8 135 L710.2 145 C692 160 672 178 654.2 194.1 Z" fill="#1f2675"/>
+<path d="M654.2 194.1 C672 178 692 160 710.2 145" fill="none" stroke="#f5c451" stroke-width="1.8" stroke-opacity="0.85" stroke-linecap="round"/>
+<path d="M643.8 181.9 C662 168 684 151 701.8 135" fill="none" stroke="#7480ff" stroke-width="1.2" stroke-opacity="0.4" stroke-linecap="round"/>
+<path d="M580 214 L639.3 176.5 Q655.1 182.8 658.7 199.5 C660 208 652 216 642 218 C630 220 618 226 606 232 L590 230 Z" fill="url(#sleeve)"/>
+<path d="M580 214 L639.3 176.5" fill="none" stroke="#7480ff" stroke-width="1.4" stroke-opacity="0.45" stroke-linecap="round"/>
+<path d="M658.7 199.5 C660 208 652 216 642 218 C630 220 618 226 606 232" fill="none" stroke="#f5c451" stroke-width="1.4" stroke-opacity="0.65" stroke-linecap="round"/>
+<path d="M639.3 176.5 Q655.1 182.8 658.7 199.5" fill="none" stroke="#d9a03a" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M639.3 176.5 Q655.1 182.8 658.7 199.5" fill="none" stroke="#ffe9a8" stroke-width="0.8" stroke-linecap="round"/>
+<path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(622 206) scale(0.3)" fill="#f5c451" opacity="0.75"/>
+
+<!-- CLOAK BODY -->
+<path d="M506 392 C490 450 470 560 452 690 L742 690 C734 610 718 520 696 452 C688 430 680 412 672 396 Z" fill="url(#cloak)"/>
+<g fill="none" stroke-linecap="round">
+  <path d="M528 486 C516 550 504 620 494 688" stroke="#070a26" stroke-width="5" stroke-opacity="0.55"/>
+  <path d="M535 486 C523 550 511 620 501 688" stroke="#3a43ad" stroke-width="1.6" stroke-opacity="0.35"/>
+  <path d="M592 488 C590 560 588 630 586 688" stroke="#070a26" stroke-width="4" stroke-opacity="0.45"/>
+  <path d="M599 488 C597 560 595 630 593 688" stroke="#3a43ad" stroke-width="1.4" stroke-opacity="0.3"/>
+  <path d="M486 520 C478 590 470 650 464 688" stroke="#070a26" stroke-width="3" stroke-opacity="0.4"/>
+  <path d="M506 392 C490 450 470 560 452 690" stroke="#7480ff" stroke-width="1.6" stroke-opacity="0.35"/>
+  <path d="M696 452 C718 520 734 610 742 690" stroke="#f5c451" stroke-width="1.6" stroke-opacity="0.4"/>
+</g>
+<path d="M630 482 C638 540 644 620 652 690" fill="none" stroke="#070a26" stroke-width="3" stroke-opacity="0.5"/>
+<path d="M633 482 C641 540 647 620 655 690" fill="none" stroke="#d9a03a" stroke-width="1.6" stroke-opacity="0.85"/>
+<g fill="#f5c451" opacity="0.75">
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(522 566) scale(0.38)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(562 640) scale(0.34)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(484 626) scale(0.36)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(700 604) scale(0.34)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(688 520) scale(0.3)"/>
 </g>
 
-<!-- ================================ -->
-<!-- LAYER 5: CHARACTER              -->
-<!-- ================================ -->
-
-<!-- Ground shadow -->
-<ellipse cx="600" cy="717" rx="92" ry="14" fill="#000000" opacity="0.55"/>
-
-<!-- HAIR back flowing -->
-<path d="M 560 214 C 540 196 528 170 532 144 C 536 116 550 98 570 90
-         C 586 84 614 84 630 90 C 650 98 664 118 667 145 C 670 172 657 196 640 212
-         C 637 232 638 260 640 284 C 642 322 646 364 642 406 C 638 448 630 492 634 534"
-      fill="url(#hr)" stroke="#180802" stroke-width="1.2"/>
-
-<!-- HELMET main shell bronze warm forge-lit left -->
-<path d="M 560 216 C 553 194 550 167 554 142 C 558 113 572 94 588 85
-         C 596 81 614 81 622 85 C 638 94 652 115 655 143 C 659 169 654 196 646 218"
-      fill="url(#bw)" stroke="#643808" stroke-width="2.2"/>
-<!-- Helmet front face plate slightly lighter -->
-<path d="M 564 218 C 558 198 556 170 560 144 C 564 118 576 100 592 92
-         C 600 88 612 88 620 92 C 636 100 648 120 651 146 C 655 172 648 198 640 220"
-      fill="url(#bn)" stroke="#643808" stroke-width="1.5"/>
-<!-- Plume channel ridge -->
-<path d="M 594 92 C 597 78 600 64 600 54 C 600 64 603 78 606 92"
-      fill="#7a4010" stroke="#523008" stroke-width="1"/>
-<!-- HELMET PLUME crimson horsehair crest -->
-<path d="M 592 92 C 587 72 584 48 586 26 C 588 10 594 3 600 1 C 606 3 612 10 614 26
-         C 616 48 613 72 608 92"
-      fill="#cc0018" stroke="#880010" stroke-width="1.2"/>
-<path d="M 595 90 C 591 70 589 48 591 28 C 593 14 596 8 600 6 C 604 8 607 14 609 28
-         C 611 48 609 70 605 90"
-      fill="#e8102a" stroke="none" opacity="0.75"/>
-<!-- Decorative brow band engraved -->
-<path d="M 560 218 C 570 202 584 194 600 192 C 616 194 630 202 640 218"
-      fill="none" stroke="#e0b048" stroke-width="2.5"/>
-<circle cx="577" cy="204" r="3.5" fill="#e0b048"/>
-<circle cx="600" cy="193" r="3.5" fill="#e0b048"/>
-<circle cx="623" cy="204" r="3.5" fill="#e0b048"/>
-<!-- Cheek guards -->
-<path d="M 560 218 C 554 230 552 248 555 262 L 570 270 L 574 226 Z"
-      fill="url(#bw)" stroke="#643808" stroke-width="1.5"/>
-<path d="M 640 218 C 646 230 648 248 645 262 L 630 270 L 626 226 Z"
-      fill="url(#bn)" stroke="#643808" stroke-width="1.5"/>
-<!-- Nasal guard -->
-<rect x="597" y="194" width="6" height="28" rx="3" fill="url(#bn)" stroke="#643808" stroke-width="0.8"/>
-
-<!-- FACE oval -->
-<ellipse cx="600" cy="234" rx="44" ry="50" fill="url(#sk)"/>
-<!-- Forge warmth on left cheek -->
-<ellipse cx="580" cy="234" rx="30" ry="36" fill="#ff6600" opacity="0.12"/>
-<!-- Cheekbone shadow right side darker -->
-<path d="M 624 256 C 634 262 640 275 636 285 C 632 293 619 297 609 294"
-      fill="#784030" stroke="none" opacity="0.6"/>
-<!-- Eyebrows strong determined -->
-<path d="M 573 219 C 581 213 591 211 597 213" fill="none" stroke="#280e04" stroke-width="2.8" stroke-linecap="round"/>
-<path d="M 603 213 C 609 211 619 213 627 219" fill="none" stroke="#280e04" stroke-width="2.8" stroke-linecap="round"/>
-<!-- Left eye -->
-<ellipse cx="585" cy="229" rx="11" ry="7.5" fill="#f0f0f8"/>
-<ellipse cx="585" cy="229" rx="7" ry="7" fill="#38100a"/>
-<ellipse cx="585" cy="229" rx="3.5" ry="3.5" fill="#080408"/>
-<circle cx="589" cy="225" r="2.2" fill="#f8f8ff" opacity="0.9"/>
-<!-- Right eye -->
-<ellipse cx="615" cy="229" rx="11" ry="7.5" fill="#f0f0f8"/>
-<ellipse cx="615" cy="229" rx="7" ry="7" fill="#38100a"/>
-<ellipse cx="615" cy="229" rx="3.5" ry="3.5" fill="#080408"/>
-<circle cx="619" cy="225" r="2.2" fill="#f8f8ff" opacity="0.9"/>
-<!-- Nose -->
-<path d="M 600 234 C 597 243 594 249 596 254 C 600 259 604 256 604 251"
-      fill="none" stroke="#9a6040" stroke-width="1.6" stroke-linecap="round"/>
-<!-- Mouth set determined -->
-<path d="M 588 264 L 612 264" stroke="#6a3020" stroke-width="2.8" stroke-linecap="round"/>
-<path d="M 588 264 C 591 270 609 270 612 264" fill="#6a3020" stroke="none"/>
-<!-- Ear left -->
-<ellipse cx="555" cy="238" rx="9" ry="13" fill="#c08850"/>
-
-<!-- NECK -->
-<rect x="590" y="278" width="20" height="30" rx="4" fill="#c08850"/>
-<rect x="590" y="278" width="7" height="30" rx="3" fill="#e09858" opacity="0.55"/>
-
-<!-- SHOULDER PAULDRONS -->
-<!-- Left warm forge-lit -->
-<path d="M 534 298 C 518 290 504 302 503 320 C 502 337 516 354 532 356 L 564 348 L 566 298"
-      fill="url(#bw)" stroke="#643808" stroke-width="2"/>
-<path d="M 505 330 C 514 338 534 343 554 338" fill="none" stroke="#e0b048" stroke-width="1.5"/>
-<!-- Right cooler shadowed -->
-<path d="M 666 298 C 682 290 696 302 697 320 C 698 337 684 354 668 356 L 636 348 L 634 298"
-      fill="url(#bn)" stroke="#643808" stroke-width="2"/>
-<path d="M 695 330 C 686 338 666 343 646 338" fill="none" stroke="#c89838" stroke-width="1.5"/>
-
-<!-- LORICA SEGMENTATA horizontal armor bands -->
-<!-- Upper chest plate -->
-<path d="M 543 304 C 543 287 561 277 600 275 C 639 277 657 287 657 304 L 662 324 L 538 324 Z"
-      fill="url(#bw)" stroke="#643808" stroke-width="2"/>
-<line x1="600" y1="279" x2="600" y2="324" stroke="#7a4010" stroke-width="2.2"/>
-<!-- Band 1 -->
-<rect x="536" y="322" width="128" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
-<!-- Band 2 -->
-<rect x="534" y="342" width="132" height="22" fill="url(#bw)" stroke="#643808" stroke-width="1.3"/>
-<!-- Band 3 -->
-<rect x="532" y="362" width="136" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
-<!-- Band 4 -->
-<rect x="530" y="382" width="140" height="22" fill="url(#bw)" stroke="#643808" stroke-width="1.3"/>
-<!-- Band 5 -->
-<rect x="528" y="402" width="144" height="22" fill="url(#bn)" stroke="#643808" stroke-width="1.3"/>
-<!-- Band highlight lines -->
-<line x1="536" y1="333" x2="664" y2="333" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
-<line x1="534" y1="353" x2="666" y2="353" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
-<line x1="532" y1="373" x2="668" y2="373" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
-<line x1="530" y1="393" x2="670" y2="393" stroke="#c89848" stroke-width="0.7" opacity="0.5"/>
-
-<!-- SCIENTIST APRON over armor linen -->
-<path d="M 574 282 L 570 354 L 568 420 L 573 460 L 600 464 L 627 460 L 632 420 L 630 354 L 626 282
-         C 618 277 608 274 600 274 C 592 274 582 277 574 282 Z"
-      fill="url(#ap)" opacity="0.88"/>
-<!-- Apron straps -->
-<path d="M 574 282 C 562 278 543 274 536 277" fill="none" stroke="#d4d0c4" stroke-width="2"/>
-<path d="M 626 282 C 638 278 657 274 664 277" fill="none" stroke="#d4d0c4" stroke-width="2"/>
-<!-- Apron pocket -->
-<rect x="581" y="342" width="38" height="28" rx="3" fill="none" stroke="#b0aa9c" stroke-width="1.2"/>
-<!-- Reagent stains on apron -->
-<ellipse cx="592" cy="302" rx="5" ry="4" fill="#7a3820" opacity="0.45"/>
-<ellipse cx="617" cy="318" rx="4" ry="3" fill="#1a5a18" opacity="0.4"/>
-<ellipse cx="607" cy="356" rx="3" ry="2.5" fill="#18285a" opacity="0.38"/>
-<ellipse cx="589" cy="382" rx="2.5" ry="2" fill="#7a3820" opacity="0.3"/>
-
-<!-- PTERUGES hanging leather strips at waist -->
-<g fill="#503010" stroke="#301808" stroke-width="0.8">
-  <path d="M 530 422 L 534 464 L 541 464 L 540 422 Z"/>
-  <path d="M 541 422 L 544 464 L 551 464 L 550 422 Z"/>
-  <path d="M 552 422 L 554 464 L 561 464 L 560 422 Z"/>
-  <path d="M 563 422 L 564 464 L 571 464 L 571 422 Z"/>
-  <path d="M 629 422 L 629 464 L 636 464 L 637 422 Z"/>
-  <path d="M 640 422 L 639 464 L 646 464 L 648 422 Z"/>
-  <path d="M 650 422 L 648 464 L 655 464 L 658 422 Z"/>
-  <path d="M 660 422 L 657 464 L 664 464 L 668 422 Z"/>
+<ellipse cx="642" cy="282" rx="28" ry="36" fill="url(#halo)" opacity="0.45"/>
+<!-- HEAD AND HOOD (local frame: eye at origin, facing right) -->
+<g transform="translate(610 275) rotate(-20) scale(1.42)">
+  <path d="M2 -26 C5 -22 6 -18 7 -14 C8 -10 10 -7 9.5 -4 C9 -2 8 -1.5 8.2 0 C10 4 14 8 17.5 11 C18.4 12.6 16 14.6 12.5 15 C13.6 17 14 18.6 13.2 19.6 C12.5 20.5 11 21 11.2 21.7 C12.4 22.6 12.8 24 12 25.1 C10.8 26.1 9.6 26.7 9.8 28 C10.5 30 12 31.6 11 33.6 C9.5 35.6 6 36.6 2 36.6 C-2 37 -4 40 -4 46 L-6 62 L-42 62 L-42 -30 Z" fill="url(#skin)"/>
+  <path d="M2 -26 C5 -22 6 -18 7 -14 C8 -10 10 -7 9.5 -4 C9 -2 8 -1.5 8.2 0 C10 4 14 8 17.5 11 C18.4 12.6 16 14.6 12.5 15 C13.6 17 14 18.6 13.2 19.6 C12.5 20.5 11 21 11.2 21.7 C12.4 22.6 12.8 24 12 25.1 C10.8 26.1 9.6 26.7 9.8 28 C10.5 30 12 31.6 11 33.6 C9.5 35.6 6 36.6 2 36.6 C-2 37 -4 40 -4 46 L-6 62 L-42 62 L-42 -30 Z" fill="url(#visorShade)"/>
+  <path d="M-4 -1.6 C-1 -4.2 3 -4.2 5.6 -2.4" fill="none" stroke="#0b0918" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M-3.4 -1.2 C0 0.6 3 0.4 5.2 -1.8" fill="none" stroke="#0b0918" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+  <ellipse cx="3" cy="-2.3" rx="1.5" ry="1.3" fill="#0b0918"/>
+  <circle cx="3.9" cy="-2.7" r="0.6" fill="#ffe9a8"/>
+  <path d="M-7 -7 C-3 -9 2 -9.2 6.8 -7.8" fill="none" stroke="#0b0918" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M7 -14 C8 -10 10 -7 9.5 -4 C9 -2 8 -1.5 8.2 0 C10 4 14 8 17.5 11 C18.4 12.6 16 14.6 12.5 15 C13.6 17 14 18.6 13.2 19.6 C12.5 20.5 11 21 11.2 21.7 C12.4 22.6 12.8 24 12 25.1 C10.8 26.1 9.6 26.7 9.8 28 C10.5 30 12 31.6 11 33.6 C9.5 35.6 6 36.6 2 36.6" fill="none" stroke="#ffd98a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 -21 C14 -30 4 -40 -12 -44 C-30 -48 -46 -38 -50 -20 C-54 -2 -52 18 -46 34 C-42 44 -34 52 -26 58 L-2 58 C-8 48 -14 36 -16 22 C-17 10 -15 -4 -11 -12 C-7 -18 2 -22 12 -22 C15 -22 17 -21.5 18 -21 Z" fill="url(#hood)"/>
+  <path d="M18 -21 C14 -30 4 -40 -12 -44" fill="none" stroke="#f5c451" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+  <path d="M-2 58 C-8 48 -14 36 -16 22 C-17 10 -15 -4 -11 -12 C-7 -18 2 -22 12 -22 C15 -22 17 -21.5 18 -21" fill="none" stroke="#d9a03a" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-2 58 C-8 48 -14 36 -16 22 C-17 10 -15 -4 -11 -12 C-7 -18 2 -22 12 -22 C15 -22 17 -21.5 18 -21" fill="none" stroke="#ffe9a8" stroke-width="0.8" stroke-linecap="round"/>
+  <path d="M-9 -16 C-13 -4 -12 10 -17 26" fill="none" stroke="#120f24" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M-5 -19 C-7 -8 -5 4 -9 15" fill="none" stroke="#1a1530" stroke-width="1.5" stroke-linecap="round"/>
+  <g fill="#f5c451" opacity="0.7">
+    <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(-30 -24) scale(0.3)"/>
+    <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(-38 14) scale(0.26)"/>
+  </g>
 </g>
 
-<!-- LEFT ARM flask side extending forward-left -->
-<!-- Upper arm -->
-<path d="M 536 310 L 500 365 L 494 392 L 508 398 L 521 386 L 547 330 L 557 304"
-      fill="url(#sk)" stroke="#7a4028" stroke-width="1.2"/>
-<!-- Left vambrace bronze forearm guard forge-warm -->
-<path d="M 500 363 L 470 414 L 460 446 L 475 452 L 506 408 L 513 368 Z"
-      fill="url(#bw)" stroke="#643808" stroke-width="1.3" opacity="0.85"/>
-<!-- Forearm skin under vambrace -->
-<path d="M 502 365 L 472 416 L 462 448 L 475 452 L 508 408 L 514 368"
-      fill="url(#sk)" stroke="#7a4028" stroke-width="0.8"/>
-<!-- Left hand -->
-<ellipse cx="460" cy="454" rx="16" ry="11" fill="url(#sk)" transform="rotate(-18 460 454)"/>
-<path d="M 448 449 C 444 441 442 435 446 431" fill="none" stroke="#9a6038" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M 454 445 C 450 437 449 431 453 427" fill="none" stroke="#9a6038" stroke-width="1.5" stroke-linecap="round"/>
-
-<!-- REAGENT FLASK glowing emerald in left hand -->
-<!-- Flask glow aura bloom -->
-<circle cx="436" cy="498" r="58" fill="url(#fa)" filter="url(#fl)"/>
-<!-- Flask glass body -->
-<path d="M 420 472 C 404 478 388 497 388 518 C 388 543 407 563 430 566
-         C 454 569 476 552 478 528 C 480 505 464 482 446 474 Z"
-      fill="#003c20" stroke="#00a844" stroke-width="1.8"/>
-<!-- Flask glowing interior -->
-<path d="M 426 476 C 412 481 398 496 398 515 C 398 537 415 555 437 558
-         C 459 561 475 546 477 525 C 479 504 465 484 447 477 Z"
-      fill="url(#fi)"/>
-<!-- Flask surface highlight -->
-<path d="M 408 500 C 410 487 421 479 434 477" fill="none" stroke="#aaffcc" stroke-width="2" opacity="0.7"/>
-<!-- Flask neck -->
-<rect x="445" y="449" width="14" height="27" rx="3" fill="#002a18" stroke="#00aa44" stroke-width="1.2"/>
-<!-- Flask stopper cork bronze -->
-<rect x="441" y="442" width="22" height="11" rx="3" fill="url(#bn)"/>
-<!-- Bubbles rising in flask -->
-<circle cx="418" cy="522" r="5" fill="#44ffaa" opacity="0.65"/>
-<circle cx="440" cy="510" r="4" fill="#44ffaa" opacity="0.55"/>
-<circle cx="428" cy="537" r="3" fill="#44ffaa" opacity="0.45"/>
-<circle cx="455" cy="527" r="3.5" fill="#aaffcc" opacity="0.50"/>
-<!-- Flask light cast greenish on arm -->
-<path d="M 458 474 L 484 458 L 492 464" fill="none" stroke="#00ff88" stroke-width="0.8" opacity="0.3"/>
-
-<!-- RIGHT ARM sword raised aloft -->
-<!-- Upper arm going up-right -->
-<path d="M 656 310 L 695 276 L 722 258 L 732 270 L 712 287 L 675 328 L 644 324"
-      fill="url(#sk)" stroke="#7a4028" stroke-width="1.2"/>
-<!-- Right vambrace bronze over forearm -->
-<path d="M 693 274 L 728 250 L 744 240 L 754 252 L 740 264 L 706 286 Z"
-      fill="url(#bn)" stroke="#643808" stroke-width="1.3" opacity="0.85"/>
-<!-- Right hand gripping gladius -->
-<path d="M 728 252 L 748 236 L 760 228 L 768 240 L 756 250 L 742 262 Z"
-      fill="url(#sk)"/>
-
-<!-- GLADIUS Roman short sword held aloft blade pointing up-right -->
-<!-- Pommel rounded bronze -->
-<ellipse cx="764" cy="256" rx="12" ry="9" fill="url(#bn)" transform="rotate(-28 764 256)"/>
-<!-- Grip wood-wrapped -->
-<path d="M 756 250 L 780 228" stroke="#2c1404" stroke-width="14" stroke-linecap="round"/>
-<!-- Grip cord wrapping -->
-<path d="M 758 248 L 782 226" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
-<path d="M 761 244 L 785 222" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
-<path d="M 764 240 L 788 218" stroke="#4a2808" stroke-width="2" opacity="0.7"/>
-<!-- Crossguard bronze -->
-<path d="M 740 242 L 796 216" stroke="#c07828" stroke-width="9" stroke-linecap="round"/>
-<path d="M 740 242 L 796 216" stroke="#e8b048" stroke-width="3.5" stroke-linecap="round" opacity="0.45"/>
-<!-- Blade leaf-shaped steel going up-right -->
-<path d="M 743 238 L 678 130 L 685 122 L 802 208 Z" fill="url(#sb)"/>
-<!-- Blade fuller central groove -->
-<line x1="746" y1="234" x2="684" y2="128" stroke="#c8d4e0" stroke-width="1.8" opacity="0.7"/>
-<!-- Blade edge steel -->
-<path d="M 743 238 L 678 128" stroke="#e8ecf4" stroke-width="0.8"/>
-<path d="M 802 208 L 685 122" stroke="#384050" stroke-width="0.8"/>
-<!-- Forge glow glint on blade left edge -->
-<path d="M 768 224 L 738 172" stroke="#ff9940" stroke-width="1.5" opacity="0.32"/>
-
-<!-- LEGS -->
-<!-- Left thigh -->
-<path d="M 554 464 L 540 562 L 555 576 L 574 570 L 582 464"
-      fill="url(#sk)" stroke="#7a4028" stroke-width="1"/>
-<!-- Right thigh -->
-<path d="M 646 464 L 660 562 L 645 578 L 626 572 L 618 464"
-      fill="url(#sk)" stroke="#7a4028" stroke-width="1"/>
-
-<!-- Left greave bronze warm forge-lit -->
-<path d="M 540 560 L 536 628 L 548 656 L 568 656 L 577 628 L 573 567"
-      fill="url(#bw)" stroke="#643808" stroke-width="1.8"/>
-<line x1="538" y1="582" x2="574" y2="582" stroke="#643808" stroke-width="0.8"/>
-<line x1="536" y1="604" x2="575" y2="604" stroke="#643808" stroke-width="0.8"/>
-<line x1="536" y1="626" x2="575" y2="626" stroke="#643808" stroke-width="0.8"/>
-
-<!-- Right greave bronze neutral -->
-<path d="M 660 560 L 664 628 L 652 656 L 632 656 L 623 628 L 627 567"
-      fill="url(#bn)" stroke="#643808" stroke-width="1.8"/>
-<line x1="662" y1="582" x2="626" y2="582" stroke="#643808" stroke-width="0.8"/>
-<line x1="664" y1="604" x2="625" y2="604" stroke="#643808" stroke-width="0.8"/>
-<line x1="664" y1="626" x2="625" y2="626" stroke="#643808" stroke-width="0.8"/>
-
-<!-- Caligae Roman military sandals -->
-<!-- Left foot -->
-<path d="M 536 654 L 532 688 L 540 692 L 570 692 L 578 688 L 576 654 Z" fill="#2c1604"/>
-<line x1="536" y1="664" x2="576" y2="664" stroke="#4c2c14" stroke-width="1.5"/>
-<line x1="534" y1="676" x2="576" y2="676" stroke="#4c2c14" stroke-width="1.5"/>
-<line x1="534" y1="686" x2="576" y2="686" stroke="#4c2c14" stroke-width="1"/>
-<!-- Right foot -->
-<path d="M 664 654 L 668 688 L 660 692 L 630 692 L 622 688 L 624 654 Z" fill="#2c1604"/>
-<line x1="664" y1="664" x2="624" y2="664" stroke="#4c2c14" stroke-width="1.5"/>
-<line x1="666" y1="676" x2="624" y2="676" stroke="#4c2c14" stroke-width="1.5"/>
-<line x1="666" y1="686" x2="624" y2="686" stroke="#4c2c14" stroke-width="1"/>
-
-<!-- ================================ -->
-<!-- LAYER 6: FOREGROUND INSTRUMENTS -->
-<!-- ================================ -->
-
-<!-- ENGRAM engraved memory tablet left -->
-<g transform="translate(172,600)">
-  <rect x="0" y="0" width="130" height="98" rx="6" fill="#14142a" stroke="#3c3c6c" stroke-width="2.2"/>
-  <rect x="7" y="7" width="116" height="84" rx="4" fill="#0c0c1e" stroke="#2a2a52" stroke-width="1"/>
-  <!-- Engraved inscription lines -->
-  <line x1="16" y1="20" x2="114" y2="20" stroke="#4848aa" stroke-width="1.3"/>
-  <line x1="16" y1="30" x2="90" y2="30" stroke="#383888" stroke-width="0.8"/>
-  <line x1="16" y1="40" x2="106" y2="40" stroke="#4848aa" stroke-width="1.3"/>
-  <line x1="16" y1="50" x2="74" y2="50" stroke="#383888" stroke-width="0.8"/>
-  <line x1="16" y1="60" x2="98" y2="60" stroke="#4848aa" stroke-width="1"/>
-  <line x1="16" y1="70" x2="82" y2="70" stroke="#383888" stroke-width="0.8"/>
-  <!-- Central circuit engram node -->
-  <circle cx="65" cy="50" r="15" fill="none" stroke="#5858cc" stroke-width="1.8"/>
-  <circle cx="65" cy="50" r="6" fill="#3838aa"/>
-  <circle cx="65" cy="50" r="2.5" fill="#6868dd"/>
-  <line x1="65" y1="35" x2="65" y2="22" stroke="#5858cc" stroke-width="1.2"/>
-  <line x1="50" y1="50" x2="30" y2="50" stroke="#5858cc" stroke-width="1.2"/>
-  <line x1="80" y1="50" x2="100" y2="50" stroke="#5858cc" stroke-width="1.2"/>
-  <line x1="65" y1="65" x2="65" y2="80" stroke="#5858cc" stroke-width="1.2"/>
-  <text x="65" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="10"
-        fill="#6868cc" letter-spacing="3">ENGRAM</text>
-  <!-- Forge warm left edge glow -->
-  <rect x="0" y="0" width="6" height="98" rx="3" fill="#ff6600" opacity="0.18"/>
+<!-- SHOULDER CAPE (gives the figure her shoulders) -->
+<path d="M560 338 C540 348 516 364 506 392 C500 410 494 432 490 452 C520 470 566 482 604 482 C632 482 654 474 670 462 C676 440 678 416 672 396 C664 380 650 368 636 356 C624 364 612 372 600 372 C584 366 572 352 560 338 Z" fill="url(#cape)"/>
+<path d="M560 338 C540 348 516 364 506 392 C500 410 494 432 490 452" fill="none" stroke="#7480ff" stroke-width="1.6" stroke-opacity="0.4"/>
+<path d="M672 396 C664 380 650 368 636 356" fill="none" stroke="#f5c451" stroke-width="1.6" stroke-opacity="0.6"/>
+<path d="M490 452 C520 470 566 482 604 482 C632 482 654 474 670 462" fill="none" stroke="#d9a03a" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M490 452 C520 470 566 482 604 482 C632 482 654 474 670 462" fill="none" stroke="#ffe9a8" stroke-width="0.9" stroke-linecap="round"/>
+<path d="M512 404 C540 420 580 428 620 424" fill="none" stroke="#11154a" stroke-width="2" stroke-opacity="0.5"/>
+<g fill="#f5c451" opacity="0.8">
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(530 440) scale(0.36)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(586 456) scale(0.4)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(646 436) scale(0.32)"/>
 </g>
 
-<!-- FORGE smith anvil center-right -->
-<g transform="translate(670,616)">
-  <!-- Anvil base foot -->
-  <path d="M 18 88 L 0 96 L 0 104 L 150 104 L 150 96 L 132 88 Z" fill="#1c1c28" stroke="#2c2c38" stroke-width="1"/>
-  <!-- Anvil waist body -->
-  <rect x="18" y="46" width="114" height="44" fill="#2a2a38" stroke="#3a3a4a" stroke-width="1"/>
-  <!-- Anvil table top -->
-  <path d="M 0 46 L 150 46 L 144 22 L 114 22 L 114 8 L 36 8 L 36 22 L 6 22 Z"
-        fill="url(#av)" stroke="#4c4c5c" stroke-width="1.5"/>
-  <!-- Anvil horn right -->
-  <path d="M 144 32 L 150 46 L 170 40 L 160 24 Z" fill="url(#av)" stroke="#4c4c5c" stroke-width="1"/>
-  <!-- Forge-warm left highlight -->
-  <path d="M 0 22 L 8 22 L 20 46 L 20 88 L 0 88 Z" fill="#ff6600" opacity="0.18"/>
-  <!-- Hot-work mark on table top -->
-  <ellipse cx="75" cy="15" rx="20" ry="5.5" fill="#ff3300" opacity="0.32"/>
-  <ellipse cx="75" cy="15" rx="10" ry="2.8" fill="#ff7700" opacity="0.42"/>
-  <!-- Surface striations wear marks -->
-  <line x1="40" y1="10" x2="110" y2="10" stroke="#4c4c5c" stroke-width="0.7"/>
-  <line x1="36" y1="17" x2="114" y2="17" stroke="#4c4c5c" stroke-width="0.7"/>
-  <!-- Sparks above anvil -->
-  <circle cx="65" cy="3" r="2.5" fill="#ffcc00" opacity="0.75"/>
-  <circle cx="80" cy="0" r="2" fill="#ff8800" opacity="0.65"/>
-  <circle cx="57" cy="1" r="1.5" fill="#ffee00" opacity="0.55"/>
-  <circle cx="90" cy="4" r="1.8" fill="#ff6600" opacity="0.60"/>
-  <text x="75" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="10"
-        fill="#7a7a8a" letter-spacing="4">FORGE</text>
+<!-- NECK CLASP -->
+<path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(620 374) scale(0.9)" fill="#f5c451"/>
+<circle cx="620" cy="374" r="2.6" fill="#fff1c1"/>
+
+<!-- NEAR HAND WITH THE ROLLED STAR CHART -->
+<g transform="translate(0 -12) rotate(-34 612 530)">
+  <rect x="537" y="519" width="150" height="22" rx="11" fill="#2b3486"/>
+  <rect x="537" y="530" width="150" height="11" rx="5.5" fill="#1b2160" opacity="0.7"/>
+  <line x1="543" y1="521" x2="681" y2="521" stroke="#f5c451" stroke-width="1.2" stroke-opacity="0.6"/>
+  <circle cx="565" cy="526" r="1.3" fill="#fff1c1"/><circle cx="578" cy="532" r="1" fill="#fff1c1"/><circle cx="668" cy="527" r="1.2" fill="#fff1c1"/>
+  <ellipse cx="539" cy="530" rx="5" ry="11" fill="#e8d3a0"/>
+  <path d="M539 525 C542 527 542 533 539 535 C537 533 537 529 539 528" fill="none" stroke="#8a6a30" stroke-width="1"/>
+  <ellipse cx="685" cy="530" rx="5" ry="11" fill="#cdb27a"/>
+  <rect x="620" y="497" width="24" height="16" rx="3" fill="#1a1836"/>
+  <rect x="620" y="497" width="24" height="3" fill="#d9a03a"/>
+  <path d="M618 520 C618 512 624 510 628 513 C630 509 636 509 638 513 C640 509 646 510 646 516 L646 548 C646 552 642 554 638 552 L622 552 C619 552 618 549 618 546 Z" fill="#141230"/>
+  <path d="M618 520 C618 512 624 510 628 513 C630 509 636 509 638 513 C640 509 646 510 646 516" fill="none" stroke="#f5c451" stroke-width="1.3" stroke-opacity="0.75" stroke-linecap="round"/>
+  <path d="M628 514 L628 524 M638 514 L638 524" stroke="#2a2650" stroke-width="1.2"/>
 </g>
 
-<!-- CRUCIBLE molten crucible right -->
-<g transform="translate(906,604)">
-  <!-- Outer shell -->
-  <path d="M 12 90 C 2 70 0 46 4 24 L 28 12 L 96 12 L 120 24 C 124 46 122 70 112 90 Z"
-        fill="#2a1408"/>
-  <!-- Molten metal interior -->
-  <path d="M 18 86 C 10 66 8 44 12 24 L 30 16 L 94 16 L 112 24 C 116 44 114 66 106 86 Z"
-        fill="url(#mm)"/>
-  <!-- Molten surface lip -->
-  <ellipse cx="62" cy="17" rx="44" ry="11" fill="#ff8800" opacity="0.92"/>
-  <ellipse cx="62" cy="17" rx="29" ry="7" fill="#ffcc00" opacity="0.87"/>
-  <!-- Surface bloom -->
-  <ellipse cx="46" cy="18" rx="10" ry="3.5" fill="#ffff88" opacity="0.75"/>
-  <!-- Walls thickness -->
-  <path d="M 4 24 L 12 24 L 18 86 L 10 86 Z" fill="#3a2010"/>
-  <path d="M 120 24 L 112 24 L 106 86 L 114 86 Z" fill="#180800"/>
-  <!-- Side handles -->
-  <path d="M 4 32 C -8 40 -8 62 4 70" fill="none" stroke="#3a2010" stroke-width="7" stroke-linecap="round"/>
-  <path d="M 120 32 C 132 40 132 62 120 70" fill="none" stroke="#180800" stroke-width="7" stroke-linecap="round"/>
-  <!-- Heat shimmer wisps above crucible -->
-  <path d="M 35 7 C 37 -1 34 -7 36 -14" fill="none" stroke="#ff8800" stroke-width="0.9" opacity="0.45" stroke-linecap="round"/>
-  <path d="M 55 4 C 58 -4 55 -11 57 -18" fill="none" stroke="#ff6600" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
-  <path d="M 78 6 C 80 -2 77 -8 79 -15" fill="none" stroke="#ff8800" stroke-width="0.9" opacity="0.4" stroke-linecap="round"/>
-  <text x="62" y="106" text-anchor="middle" font-family="Georgia, serif" font-size="10"
-        fill="#8a4a28" letter-spacing="2">CRUCIBLE</text>
+<!-- ASTROLABE (hanging from the raised hand) -->
+<circle cx="724" cy="220" r="70" fill="#f5c451" opacity="0.4" filter="url(#b14)"/>
+<circle cx="724" cy="145" r="8" fill="none" stroke="#d9a03a" stroke-width="3"/>
+<path d="M712 164 C715 159 719 157 719 152 L729 152 C729 157 733 159 736 164 Z" fill="url(#brass)" stroke="#6b4512" stroke-width="1"/>
+<circle cx="724" cy="220" r="58" fill="url(#brass)" stroke="#6b4512" stroke-width="2"/>
+<circle cx="724" cy="220" r="52.5" fill="none" stroke="#5a3a10" stroke-width="6" stroke-dasharray="1.1 3.48"/>
+<circle cx="724" cy="220" r="46" fill="url(#plate)" stroke="#6b4512" stroke-width="1.5"/>
+<g fill="none" stroke="#5a3a10" stroke-width="1.1">
+  <circle cx="724" cy="220" r="36"/>
+  <circle cx="724" cy="220" r="23"/>
+  <circle cx="724" cy="233" r="30" stroke-opacity="0.7"/>
+  <line x1="724" y1="175" x2="724" y2="265"/>
+  <line x1="679" y1="220" x2="769" y2="220"/>
+</g>
+<g fill="none" stroke="#fff1c1" stroke-width="2" stroke-linecap="round">
+  <circle cx="729" cy="212" r="27"/>
+  <path d="M700 203 C708 181 742 179 754 201"/>
+  <path d="M696 231 C706 249 736 255 752 239"/>
+</g>
+<g fill="#fff1c1">
+  <path d="M690 227 L702 222 L701 232 Z"/>
+  <path d="M760 247 L749 237 L746 246 Z"/>
+  <path d="M738 171 L732 183 L742 184 Z"/>
+  <path d="M704 258 L711 247 L717 255 Z"/>
+</g>
+<g transform="rotate(-13.7 724 220)">
+  <rect x="670" y="217" width="108" height="6" rx="2" fill="#5a3a10"/>
+  <rect x="670" y="217" width="108" height="2" fill="#ffe9a8" opacity="0.75"/>
+  <rect x="676" y="210" width="5" height="13" fill="#8a5a14"/>
+  <rect x="767" y="210" width="5" height="13" fill="#8a5a14"/>
+</g>
+<circle cx="724" cy="220" r="4.5" fill="#ffe9a8" stroke="#5a3a10" stroke-width="1.2"/>
+<path d="M676.4 192.5 A55 55 0 0 1 705.2 168.3" fill="none" stroke="#fff6d8" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+<!-- RAISED HAND: GLOVED FIST GRIPPING THE RING -->
+<g transform="translate(708 139) rotate(-34.4)">
+  <rect x="-9" y="-8.5" width="13" height="17" rx="2" fill="#141230"/>
+  <rect x="-9" y="-8.5" width="3" height="17" fill="#d9a03a"/>
+  <rect x="2" y="-10" width="21" height="20" rx="7" fill="#141230"/>
+  <path d="M6 -10 C10 -14 18 -14 21 -8" fill="none" stroke="#141230" stroke-width="5" stroke-linecap="round"/>
+  <path d="M5 10 L21 10" stroke="#f5c451" stroke-width="1.6" stroke-opacity="0.85" stroke-linecap="round"/>
+  <path d="M9 3 L9 9 M14 3 L14 9 M19 3 L19 8" stroke="#2a2650" stroke-width="1.1"/>
+  <path d="M8 10 C8 13 11 13 11 10 M13 10 C13 13 16 13 16 10 M18 10 C18 12.5 21 12.5 21 9" fill="none" stroke="#f5c451" stroke-width="1" stroke-opacity="0.6"/>
 </g>
 
-<!-- ================================ -->
-<!-- LAYER 7: TITLE + TYPOGRAPHY     -->
-<!-- ================================ -->
+<!-- ORBITAL RING, FRONT HALF -->
+<g transform="translate(600 548) rotate(-4)">
+  <ellipse rx="270" ry="52" fill="none" stroke="#f5c451" stroke-width="2" stroke-opacity="0.8" clip-path="url(#frontHalf)"/>
+</g>
 
-<!-- Decorative rules flanking title -->
-<line x1="128" y1="66" x2="306" y2="66" stroke="#6a0010" stroke-width="1.2"/>
-<line x1="894" y1="66" x2="1072" y2="66" stroke="#6a0010" stroke-width="1.2"/>
-<!-- Diamond accents -->
-<polygon points="318,59 330,66 318,73 306,66" fill="#8b0010"/>
-<polygon points="882,59 894,66 882,73 870,66" fill="#8b0010"/>
+<!-- PARAPET -->
+<rect x="0" y="688" width="1200" height="14" fill="url(#coping)"/>
+<rect x="0" y="688" width="1200" height="2" fill="url(#copingLight)"/>
+<rect x="0" y="702" width="1200" height="40" fill="#10143a"/>
+<g stroke="#0a0d2a" stroke-width="2">
+  <line x1="150" y1="702" x2="150" y2="742"/><line x1="450" y1="702" x2="450" y2="742"/><line x1="750" y1="702" x2="750" y2="742"/><line x1="1050" y1="702" x2="1050" y2="742"/>
+</g>
+<rect x="0" y="742" width="1200" height="58" fill="#070a20"/>
+<line x1="0" y1="742" x2="1200" y2="742" stroke="#1d2360" stroke-width="1.5"/>
 
-<!-- Title -->
-<text x="600" y="76"
-      text-anchor="middle"
-      font-family="Georgia, 'Times New Roman', serif"
-      font-size="70"
-      font-weight="bold"
-      letter-spacing="14"
-      fill="#e0101e"
-      filter="url(#tg)">MARCELLA</text>
+<!-- ENGRAM: THE MEMORY TABLET -->
+<ellipse cx="260" cy="690" rx="62" ry="6" fill="#05061a" opacity="0.6"/>
+<path d="M214 688 L214 610 C214 590 236 580 260 580 C284 580 306 590 306 610 L306 688 Z" fill="url(#slate)" stroke="#3a4396" stroke-width="2"/>
+<path d="M224 684 L224 614 C224 598 242 590 260 590 C278 590 296 598 296 614 L296 684 Z" fill="none" stroke="#1b2160" stroke-width="2"/>
+<path d="M260 580 C284 580 306 590 306 610 L306 650" fill="none" stroke="#f5c451" stroke-width="1.6" stroke-opacity="0.6"/>
+<g stroke="#b9c2ff" stroke-width="3" fill="none" opacity="0.35" filter="url(#b2)">
+  <polyline points="238,628 252,612 270,622 284,606"/><circle cx="260" cy="650" r="13"/>
+</g>
+<g stroke="#b9c2ff" stroke-width="1.2" fill="none" opacity="0.9">
+  <polyline points="238,628 252,612 270,622 284,606"/>
+  <circle cx="260" cy="650" r="13"/>
+  <path d="M247 650 L273 650 M260 637 L260 663"/>
+  <line x1="236" y1="672" x2="284" y2="672"/><line x1="242" y1="678" x2="278" y2="678"/>
+</g>
+<g fill="#eef1ff">
+  <circle cx="238" cy="628" r="2"/><circle cx="252" cy="612" r="2.2"/><circle cx="270" cy="622" r="1.8"/><circle cx="284" cy="606" r="2.2"/>
+</g>
 
-<!-- Tagline -->
-<text x="600" y="754"
-      text-anchor="middle"
-      font-family="Georgia, 'Times New Roman', serif"
-      font-size="17"
-      letter-spacing="2.5"
-      fill="#9aacbc"
-      opacity="0.92">The little warrior of the science legion</text>
+<!-- FORGE: THE ANVIL -->
+<ellipse cx="600" cy="690" rx="78" ry="6" fill="#05061a" opacity="0.6"/>
+<path d="M528 628 C548 628 556 630 560 628 L670 628 L670 642 C652 644 640 648 632 656 L628 668 L650 680 L650 688 L550 688 L550 680 L572 668 L568 656 C560 648 548 644 540 642 C534 640 529 635 528 628 Z" fill="url(#steel)" stroke="#11153d" stroke-width="1.5"/>
+<path d="M528 628 L670 628" stroke="#f5c451" stroke-width="2" stroke-opacity="0.85"/>
+<circle cx="612" cy="634" r="12" fill="url(#emberG)"/>
+<g fill="#f5c451" opacity="0.6" filter="url(#b2)"><circle cx="604" cy="620" r="7"/></g>
+<path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(604 620) scale(0.55)" fill="#ffe9a8"/>
+<g fill="#ffd36b"><circle cx="590" cy="606" r="1.4"/><circle cx="616" cy="600" r="1.1"/><circle cx="603" cy="594" r="0.9"/></g>
 
-<!-- Tagline rules -->
-<line x1="148" y1="758" x2="332" y2="758" stroke="#3a3a4a" stroke-width="0.8"/>
-<line x1="868" y1="758" x2="1052" y2="758" stroke="#3a3a4a" stroke-width="0.8"/>
+<!-- CRUCIBLE -->
+<ellipse cx="940" cy="640" rx="70" ry="40" fill="url(#cglow)"/>
+<ellipse cx="940" cy="690" rx="52" ry="6" fill="#05061a" opacity="0.6"/>
+<path d="M904 634 L976 634 C974 656 968 676 958 688 L922 688 C912 676 906 656 904 634 Z" fill="url(#iron)" stroke="#120d1c" stroke-width="1.5"/>
+<path d="M904 634 C906 656 912 676 922 688" fill="none" stroke="#f5c451" stroke-width="1.5" stroke-opacity="0.5"/>
+<ellipse cx="940" cy="634" rx="36" ry="8" fill="#2a1f33" stroke="#7a4a2a" stroke-width="1.5"/>
+<ellipse cx="940" cy="634.5" rx="31" ry="5.5" fill="url(#molten)"/>
+<g fill="#ffd36b"><circle cx="930" cy="618" r="1.2"/><circle cx="948" cy="612" r="1"/></g>
 
-<!-- Brand mark -->
-<text x="600" y="776"
-      text-anchor="middle"
-      font-family="Georgia, serif"
-      font-size="11"
-      letter-spacing="4"
-      fill="#4a4a5a"
-      opacity="0.65">ETHARA.AI  --  TERMINAL-BENCH SCIENCE 0.1</text>
+<!-- LABELS -->
+<g font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="5" fill="#c9a24e" text-anchor="middle">
+  <text x="263" y="728">ENGRAM</text>
+  <text x="603" y="728">FORGE</text>
+  <text x="943" y="728">CRUCIBLE</text>
+</g>
 
+<!-- CAPTION AND FOOTER -->
+<text x="600" y="768" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-style="italic" fill="#efe6d2" letter-spacing="1">The little warrior of the science legion</text>
+<text x="602" y="791" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#8f95c9">ETHARA.AI -- TERMINAL-BENCH SCIENCE 0.1</text>
+
+<!-- TITLE -->
+<g font-family="Georgia, 'Times New Roman', serif" font-size="66" text-anchor="middle">
+  <g fill="#f5c451" opacity="0.5" filter="url(#b5)"><text x="394.5" y="90">M</text><text x="461.5" y="90">A</text><text x="522.7" y="90">R</text><text x="582.9" y="90">C</text><text x="641.5" y="90">E</text><text x="698.7" y="90">L</text><text x="754.3" y="90">L</text><text x="812.2" y="90">A</text></g>
+  <g fill="url(#titleG)"><text x="394.5" y="90">M</text><text x="461.5" y="90">A</text><text x="522.7" y="90">R</text><text x="582.9" y="90">C</text><text x="641.5" y="90">E</text><text x="698.7" y="90">L</text><text x="754.3" y="90">L</text><text x="812.2" y="90">A</text></g>
+</g>
+<rect x="140" y="65.25" width="178" height="1.5" fill="url(#ruleL)"/>
+<rect x="882" y="65.25" width="178" height="1.5" fill="url(#ruleR)"/>
+<path d="M324 62 L328 66 L324 70 L320 66 Z M876 62 L880 66 L876 70 L872 66 Z" fill="#f5c451"/>
+<g fill="#f5c451">
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(128 66) scale(0.7)"/>
+  <path d="M0,-11 C1,-2 2,-1 11,0 C2,1 1,2 0,11 C-1,2 -2,1 -11,0 C-2,-1 -1,-2 0,-11 Z" transform="translate(1072 66) scale(0.7)"/>
+</g>
 </svg>
