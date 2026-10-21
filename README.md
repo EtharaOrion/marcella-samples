@@ -76,6 +76,8 @@ Code is released under the [MIT License](LICENSE). Environment specifications ar
 
 ## Contact
 
+[Ethara AI on GitHub](https://github.com/Ethara-Ai), [SECURITY.md](SECURITY.md) for a private report, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
+
 Security disclosures: security@ethara.ai
 
 Code of conduct matters: conduct@ethara.ai
