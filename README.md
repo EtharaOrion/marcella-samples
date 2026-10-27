@@ -81,3 +81,9 @@ Code is released under the [MIT License](LICENSE). Environment specifications ar
 Security disclosures: security@ethara.ai
 
 Code of conduct matters: conduct@ethara.ai
+
+---
+
+## Copyright
+
+Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
