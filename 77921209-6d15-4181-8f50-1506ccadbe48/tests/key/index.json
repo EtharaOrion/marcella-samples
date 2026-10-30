@@ -1,0 +1,1429 @@
+{
+ "diagnosis": {
+  "case_01/P1": {
+   "events": 102025,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_02/P3": {
+   "events": 101691,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_03/P2": {
+   "events": 104914,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_04/P1": {
+   "events": 101870,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_05/P1": {
+   "events": 103086,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_05/P2": {
+   "events": 102323,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P1": {
+   "events": 102891,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P2": {
+   "events": 104600,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P3": {
+   "events": 104139,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_07/P2": {
+   "events": 103412,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_08/P1": {
+   "events": 105869,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_08/P2": {
+   "events": 100370,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_09/P1": {
+   "events": 104230,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_10/P1": {
+   "events": 200000,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_11/P2": {
+   "events": 101684,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_12/P1": {
+   "events": 126522,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_13/P2": {
+   "events": 555013,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_14/P2": {
+   "events": 147453,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_15/P1": {
+   "events": 104688,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_16/P1": {
+   "events": 483230,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_16/P3": {
+   "events": 116104,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_17/P1": {
+   "events": 979440,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P1": {
+   "events": 107849,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P2": {
+   "events": 107819,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P3": {
+   "events": 107502,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_19/P1": {
+   "events": 100604,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_19/P2": {
+   "events": 100730,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_20/P2": {
+   "events": 105294,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_20/P4": {
+   "events": 105386,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD133",
+    "CD2",
+    "CD33",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_21/P1": {
+   "events": 102994,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_21/P2": {
+   "events": 105603,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_22/P1": {
+   "events": 104400,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_22/P2": {
+   "events": 104432,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_23/P2": {
+   "events": 107134,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_23/P3": {
+   "events": 106627,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P1": {
+   "events": 103814,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P2": {
+   "events": 103747,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P3": {
+   "events": 103723,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P4": {
+   "events": 103738,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD133",
+    "CD2",
+    "CD33",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_25/P1": {
+   "events": 103351,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_26/P1": {
+   "events": 104444,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_26/P2": {
+   "events": 105422,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_26/P4": {
+   "events": 103981,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD133",
+    "CD2",
+    "CD33",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_27/P1": {
+   "events": 107341,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_27/P2": {
+   "events": 107140,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_28/P1": {
+   "events": 106903,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_28/P3": {
+   "events": 106573,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  }
+ },
+ "followup": {
+  "case_01/P1": {
+   "events": 1027884,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_01/P2": {
+   "events": 1044423,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P1": {
+   "events": 544275,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P2": {
+   "events": 542000,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_06/P3": {
+   "events": 528775,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_07/P2": {
+   "events": 1064562,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_10/P1": {
+   "events": 1090443,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_11/P2": {
+   "events": 1094511,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_12/P1": {
+   "events": 645425,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_12/P2": {
+   "events": 749850,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_14/P2": {
+   "events": 1057043,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_15/P1": {
+   "events": 1027478,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_17/P1": {
+   "events": 1033180,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P1": {
+   "events": 968093,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P2": {
+   "events": 1029264,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_18/P3": {
+   "events": 995325,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_21/P1": {
+   "events": 1074822,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_21/P2": {
+   "events": 1056028,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_22/P1": {
+   "events": 1383270,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_22/P2": {
+   "events": 1303364,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_23/P2": {
+   "events": 2211150,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_23/P3": {
+   "events": 1545900,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P1": {
+   "events": 1020917,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P2": {
+   "events": 1020531,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P3": {
+   "events": 1053256,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD14",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_24/P4": {
+   "events": 1019943,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD133",
+    "CD2",
+    "CD33",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_25/P1": {
+   "events": 1070714,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_26/P1": {
+   "events": 1027530,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_26/P2": {
+   "events": 1027317,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_27/P1": {
+   "events": 1055264,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_27/P2": {
+   "events": 1038956,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD15",
+    "CD19",
+    "CD22",
+    "CD34",
+    "CD45",
+    "HLA-DR"
+   ]
+  },
+  "case_28/P1": {
+   "events": 346840,
+   "panel": [
+    "CD117",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD45",
+    "CD56",
+    "CD7",
+    "HLA-DR"
+   ]
+  },
+  "case_28/P3": {
+   "events": 313858,
+   "panel": [
+    "CD117",
+    "CD11B",
+    "CD13",
+    "CD33",
+    "CD34",
+    "CD36",
+    "CD45",
+    "HLA-DR"
+   ]
+  }
+ },
+ "reports": {
+  "case_01": [
+   {
+    "laip": "L1",
+    "phenotype": "CD56+ CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD7+ CD13+ CD34+",
+    "tube": "P1"
+   }
+  ],
+  "case_02": [
+   {
+    "laip": "L1",
+    "phenotype": "CD14+ CD36-",
+    "tube": "P3"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD14+ HLA-DR-",
+    "tube": "P3"
+   }
+  ],
+  "case_03": [
+   {
+    "laip": "L1",
+    "phenotype": "CD22+ CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_04": [
+   {
+    "laip": "L1",
+    "phenotype": "CD33- CD13+ CD34+",
+    "tube": "P1"
+   }
+  ],
+  "case_05": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD19+ CD13+ CD117+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD22+ CD13+ CD117+",
+    "tube": "P2"
+   }
+  ],
+  "case_06": [
+   {
+    "laip": "L1",
+    "phenotype": "CD34+ CD13+ CD7+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD34+ CD13+ HLA-DR+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD34+ CD13+ CD15+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L4",
+    "phenotype": "CD34+ CD13+ CD11b+",
+    "tube": "P3"
+   }
+  ],
+  "case_07": [
+   {
+    "laip": "L1",
+    "phenotype": "CD13+ CD22+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_08": [
+   {
+    "laip": "L1",
+    "phenotype": "CD56+ CD13+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD15- HLA-DR- CD13+ CD117+",
+    "tube": "P2"
+   }
+  ],
+  "case_09": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "HLA-DR- CD13+ CD34+",
+    "tube": "P1"
+   }
+  ],
+  "case_10": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "HLA-DR- CD13+ CD34+",
+    "tube": "P1"
+   }
+  ],
+  "case_11": [
+   {
+    "laip": "L1",
+    "phenotype": "CD15- HLA-DR- CD13+ CD117+",
+    "tube": "P2"
+   }
+  ],
+  "case_12": [
+   {
+    "laip": "L1",
+    "phenotype": "CD34+ CD13+ CD33-",
+    "tube": "P1"
+   }
+  ],
+  "case_13": [
+   {
+    "laip": "L1",
+    "phenotype": "CD22+ CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_14": [
+   {
+    "laip": "L1",
+    "phenotype": "CD15+ CD13+ CD34+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "HLA-DR- CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_15": [
+   {
+    "laip": "L1",
+    "phenotype": "CD13+ CD56+",
+    "tube": "P1"
+   }
+  ],
+  "case_16": [
+   {
+    "laip": "L1",
+    "phenotype": "CD13- CD33+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD56+ CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD7+ CD33+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L4",
+    "phenotype": "HLA-DR- CD33+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L5",
+    "phenotype": "CD11b+ CD13+ CD34+",
+    "tube": "P3"
+   }
+  ],
+  "case_17": [
+   {
+    "laip": "L1",
+    "phenotype": "CD117+ CD13+ CD33-",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD34+ CD13+ CD33-",
+    "tube": "P1"
+   }
+  ],
+  "case_18": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD15- HLA-DR- CD13+ CD117+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD19+ CD13+ CD117+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L4",
+    "phenotype": "CD11b+ CD13+ CD117+",
+    "tube": "P3"
+   }
+  ],
+  "case_19": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD15- HLA-DR- CD13+ CD117+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD22+ CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_20": [
+   {
+    "laip": "L1",
+    "phenotype": "HLA-DR- CD13+ CD34+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "HLA-DR- CD15- CD13+ CD117+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD2+ CD13+ CD117+",
+    "tube": "P4"
+   }
+  ],
+  "case_21": [
+   {
+    "laip": "L1",
+    "phenotype": "CD33- CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD15+ CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_22": [
+   {
+    "laip": "L1",
+    "phenotype": "CD33- CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD15- HLA-DR- CD13+ CD117+",
+    "tube": "P2"
+   }
+  ],
+  "case_23": [
+   {
+    "laip": "L1",
+    "phenotype": "CD34+ CD13+ CD22+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD34+ CD13+ CD11b+",
+    "tube": "P3"
+   }
+  ],
+  "case_24": [
+   {
+    "laip": "L1",
+    "phenotype": "HLA-DR- CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD19+ CD13+ CD34+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD11b+ CD13+ CD34+",
+    "tube": "P3"
+   },
+   {
+    "laip": "L4",
+    "phenotype": "CD33++ CD13+ CD34+",
+    "tube": "P4"
+   }
+  ],
+  "case_25": [
+   {
+    "laip": "L1",
+    "phenotype": "CD13- CD33+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD56+ CD33+ CD117+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD7+ CD33+ CD117+",
+    "tube": "P1"
+   }
+  ],
+  "case_26": [
+   {
+    "laip": "L1",
+    "phenotype": "CD34+ CD13+ CD45-",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD34+ CD33+ CD13+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD34+ CD13+ CD15+",
+    "tube": "P2"
+   },
+   {
+    "laip": "L4",
+    "phenotype": "CD34+ CD13+ CD2+",
+    "tube": "P4"
+   }
+  ],
+  "case_27": [
+   {
+    "laip": "L1",
+    "phenotype": "CD7+ CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD22+ CD13+ CD34+",
+    "tube": "P2"
+   }
+  ],
+  "case_28": [
+   {
+    "laip": "L1",
+    "phenotype": "CD33- CD13+ CD34+",
+    "tube": "P1"
+   },
+   {
+    "laip": "L2",
+    "phenotype": "CD11b+ CD13+ CD36-",
+    "tube": "P3"
+   },
+   {
+    "laip": "L3",
+    "phenotype": "CD13+ HLA-DR-",
+    "tube": "P3"
+   }
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+[scoring.test_output]
+aggregation = "weighted-mean"
+
+[[reward]]
+name = "reward"
+aggregation = "weighted-mean"
+weights = { test_output = 0.80, judge = 0.20 }

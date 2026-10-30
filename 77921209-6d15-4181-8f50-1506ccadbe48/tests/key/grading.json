@@ -1,0 +1,160 @@
+{
+ "cap": 0.2,
+ "credited": [
+  "case_11",
+  "case_12",
+  "case_17",
+  "case_24",
+  "case_27",
+  "case_28"
+ ],
+ "credited_ceiling_percent": 1.0,
+ "cut_percent": 0.1,
+ "determinable": {
+  "case_01": {
+   "expert_mrd_percent": 42.49088078224745
+  },
+  "case_06": {
+   "expert_mrd_percent": 2.548074780870661
+  },
+  "case_07": {
+   "expert_mrd_percent": 0.003462723778524187
+  },
+  "case_10": {
+   "expert_mrd_percent": 0.007671537083301789
+  },
+  "case_14": {
+   "expert_mrd_percent": 0.672377997739429
+  },
+  "case_15": {
+   "expert_mrd_percent": 3.849461272510946
+  },
+  "case_18": {
+   "expert_mrd_percent": 0.02618563975133503
+  },
+  "case_21": {
+   "expert_mrd_percent": 0.005310967351849544
+  },
+  "case_22": {
+   "expert_mrd_percent": 0.4124044474135629
+  },
+  "case_23": {
+   "expert_mrd_percent": 0.002679891548617444
+  },
+  "case_25": {
+   "expert_mrd_percent": 0.015589819847639491
+  },
+  "case_26": {
+   "expert_mrd_percent": 22.679334428923582
+  }
+ },
+ "diagnosis": {
+  "determinable": [
+   "case_01/L1",
+   "case_01/L2",
+   "case_02/L1",
+   "case_02/L2",
+   "case_03/L1",
+   "case_04/L1",
+   "case_05/L1",
+   "case_05/L2",
+   "case_05/L3",
+   "case_06/L1",
+   "case_06/L3",
+   "case_06/L4",
+   "case_07/L1",
+   "case_08/L1",
+   "case_08/L2",
+   "case_09/L2",
+   "case_10/L1",
+   "case_10/L2",
+   "case_11/L1",
+   "case_12/L1",
+   "case_13/L1",
+   "case_14/L1",
+   "case_14/L2",
+   "case_16/L1",
+   "case_16/L2",
+   "case_16/L3",
+   "case_16/L4",
+   "case_16/L5",
+   "case_18/L1",
+   "case_18/L2",
+   "case_18/L3",
+   "case_18/L4",
+   "case_19/L1",
+   "case_19/L2",
+   "case_19/L3",
+   "case_20/L1",
+   "case_20/L2",
+   "case_20/L3",
+   "case_21/L1",
+   "case_21/L2",
+   "case_22/L1",
+   "case_22/L2",
+   "case_23/L1",
+   "case_23/L2",
+   "case_24/L1",
+   "case_24/L2",
+   "case_24/L4",
+   "case_25/L1",
+   "case_25/L2",
+   "case_25/L3",
+   "case_26/L1",
+   "case_26/L2",
+   "case_26/L3",
+   "case_26/L4",
+   "case_27/L1",
+   "case_27/L2",
+   "case_28/L1"
+  ],
+  "pass_share": 0.9,
+  "unit_f1": 0.8
+ },
+ "followup_wbc": {
+  "case_01/P1": 994877,
+  "case_01/P2": 1015681,
+  "case_06/P1": 484428,
+  "case_06/P2": 481509,
+  "case_06/P3": 471297,
+  "case_07/P2": 1010765,
+  "case_10/P1": 990675,
+  "case_11/P2": 988965,
+  "case_12/P1": 434717,
+  "case_12/P2": 558237,
+  "case_14/P2": 845804,
+  "case_15/P1": 964031,
+  "case_17/P1": 968268,
+  "case_18/P1": 877876,
+  "case_18/P2": 943895,
+  "case_18/P3": 912714,
+  "case_21/P1": 990368,
+  "case_21/P2": 979106,
+  "case_22/P1": 872687,
+  "case_22/P2": 774119,
+  "case_23/P2": 1762753,
+  "case_23/P3": 1306023,
+  "case_24/P1": 963853,
+  "case_24/P2": 962690,
+  "case_24/P3": 995997,
+  "case_24/P4": 964351,
+  "case_25/P1": 1000653,
+  "case_26/P1": 973600,
+  "case_26/P2": 972783,
+  "case_27/P1": 965316,
+  "case_27/P2": 940468,
+  "case_28/P1": 268712,
+  "case_28/P3": 236728
+ },
+ "magnitude_factor": 5.0,
+ "neg_min_compartment": 100,
+ "neg_min_wbc": 500000,
+ "part_weights": [
+  0.4,
+  0.4,
+  0.2
+ ],
+ "rel_tol": 1e-06,
+ "wbc_share": 0.9,
+ "wbc_tolerance": 0.2
+}

@@ -1,0 +1,10 @@
+*
+!requirements.lock.txt
+!test.sh
+!test_output.py
+!reward.toml
+!judge.toml
+!reference.md
+!judge_not_called.py.in
+!key/
+!key/**

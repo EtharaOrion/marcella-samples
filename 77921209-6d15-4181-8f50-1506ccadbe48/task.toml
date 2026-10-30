@@ -1,0 +1,74 @@
+schema_version = "1.4"
+artifacts = [
+    { source = "/app/output" },
+    { source = "/app/method.md" },
+    { source = "/var/lib/mrd-integrity/data.sha256" },
+]
+
+[task]
+name = "ethara/aml-mrd-laip-tracking"
+version = "1.0.0"
+description = "Measure flow-cytometric measurable residual disease in real acute myeloid leukaemia follow-up bone marrow by tracking each case's diagnosis leukaemia-associated immunophenotypes, report the ELN 2021 calls and the counted events as masks."
+authors = [{ name = "chirayu.gaur", email = "chirayu.gaur@ethara.ai" }]
+keywords = ["flow-cytometry", "measurable-residual-disease", "acute-myeloid-leukaemia", "immunophenotyping", "fcs", "rare-event-detection"]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 0.5
+platforms = ["linux/amd64", "linux/arm64"]
+domain = "life-sciences"
+field = "medicine"
+subfield = "haematology"
+tags = ["mrd", "aml", "flow-cytometry", "laip", "eln-2021", "real-patient-data"]
+expert_time_estimate_hours = 8
+reward_type = "continuous"
+difficulty_explanation = "The agent must gate every LAIP the laboratory reports at diagnosis, from the laboratory's pre-gating and the phenotype text, and track it into ungated follow-up marrow, where normal and regenerating CD34-positive and CD117-positive progenitors fall inside the diagnosis gates. Copying each diagnosis gate onto its follow-up tube reaches a median precision of 0.038 at recall 1.000 over the 23 follow-up LAIPs with a matching gate, and normal marrow alone holds 0.29 to 1.16 percent CD34-positive white cells, several times the 0.1 percent cut. A correct answer needs per-file compensation, the ELN 2021 white-cell denominator, a healthy-donor reference that separates leukaemia from regeneration, and the ELN negativity rule; copied gates, uncompensated data, an all-events denominator and a blast-gate count all fail."
+solution_explanation = "solution/solve.sh runs solution/oracle.py, which reads only /data. It compensates every file with its own SPILL matrix, learns the white-cell, CD34-positive and CD117-positive gates from the laboratory's diagnosis pre-gating and half of the healthy donors, rebuilds each reported LAIP on its diagnosis tube against the healthy donors' distribution, trains one classifier per LAIP whose threshold keeps at most 1e-5 of the held-out donors' white cells inside it, and counts each LAIP in every follow-up tube inside its compartment among the white cells. The tables, the masks and method.md come from the same masks. harbor run -a oracle scores 1.0."
+verification_explanation = "tests/test.sh grades with Harbor Reward Kit in a separate verifier container. An integrity gate (every file and column present, 0/1 masks of the right length, /data unchanged, no text aimed at a grader) must pass, then three parts: the diagnosis LAIP masks against the experts' own cells (F1 at least 0.8 for 90 percent of the determinable LAIPs), the clinical calls and MRD sizes against the expert annotation within tolerances taken from the measured spread of defensible methods, and every reported number recomputed from the agent's own masks. A fully correct answer scores 1.0 and any failing part caps the compiled score at 0.2; in live mode the reward is 0.80 times the compiled score plus 0.20 times a council judge's checklist score, and the judge is called only when the compiled score is 1.0. The grader is checked by the oracle (1.0), the nop agent (0.0), the experts' own annotation replayed as an answer (1.0), 24 controls (8 harmless format changes 1.0, 11 broken outputs 0.0, 5 known-wrong methods 0.18 to 0.19) and seven implementation variants of the reference (all 1.0); the controls and the variants are graded by both the shipped verifier and an independently written prototype verifier."
+
+[verifier]
+timeout_sec = 1800
+network_mode = "allowlist"
+allowed_hosts = ["api.openai.com", "api.anthropic.com"]
+environment_mode = "separate"
+
+[verifier.env]
+RUBRIC_MODE = "control"
+
+[verifier.environment]
+network_mode = "allowlist"
+allowed_hosts = ["api.openai.com", "api.anthropic.com"]
+build_timeout_sec = 1200
+cpus = 2
+memory_mb = 8192
+storage_mb = 10240
+gpus = 0
+
+[[verifier.collect]]
+command = "mkdir -p /var/lib/mrd-integrity && cd /data && find . -type f -print0 | sort -z | xargs -0 sha256sum > /var/lib/mrd-integrity/data.sha256"
+user = "root"
+timeout_sec = 600
+
+[agent]
+timeout_sec = 28800
+network_mode = "no-network"
+user = "1001:1001"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600
+cpus = 4
+memory_mb = 16384
+storage_mb = 30720
+gpus = 0
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-10-28"
+source_kind = "private_repository"
+
+[upstream_provenance.source]
+canonical_repo = "github.com/EtharaOrion/marcella"
+fork_ancestry_digest = "sha256:70ce3b650c8bed14a64d092c3a09bb6bd65cd3b2f12db1f81aab7bb394e36af7"
+base_commit = "b88fc934d744ed77453028976d943ff8aef7b767"
+event_timestamp = "2024-04-26T09:06:00Z"

@@ -1,0 +1,251 @@
+{
+  "reward": {
+    "kind": "group",
+    "score": 0.3412,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "judge",
+        "weight": 0.2,
+        "detail": {
+          "score": 0.9286,
+          "criteria": [
+            {
+              "id": "j_compensation",
+              "name": "j_compensation",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent applies each file's own SPILL compensation matrix to the fluorescence values before it draws any gate.",
+              "reasoning": "method.md says fluorescence was compensated with each file's own SPILL matrix (events multiplied by its inverse) before modelling and gating."
+            },
+            {
+              "id": "j_lab_pregating",
+              "name": "j_lab_pregating",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent uses the laboratory's diagnosis pre-gating and LAIP report to define each reported LAIP on its diagnosis tube.",
+              "reasoning": "Diagnosis LAIP masks were rebuilt inside the supplied white-cell and CD34/CD117 pre-gates. Phenotype scores were calibrated to the reported LAIP sizes and phenotypes."
+            },
+            {
+              "id": "j_normal_background",
+              "name": "j_normal_background",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent uses the healthy donors' marrow to limit how many normal cells each LAIP gate admits before it applies the gate to follow-up tubes.",
+              "reasoning": "Each LAIP gate was combined with a diagnosis-versus-healthy-marrow classifier trained on all 20 donors. Its threshold was set from reference-score percentiles (99th in progenitor compartments, 99.99th in WBC) before follow-up use."
+            },
+            {
+              "id": "j_normal_progenitors",
+              "name": "j_normal_progenitors",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent separates leukaemic cells from normal or regenerating CD34-positive and CD117-positive progenitors instead of counting every follow-up event inside a diagnosis LAIP gate.",
+              "reasoning": "The healthy-marrow classifier explicitly rejects mature or regenerating populations sharing phenotype markers. LAIP counts are subsets of the progenitor compartments, not the whole compartment."
+            },
+            {
+              "id": "j_track_laips",
+              "name": "j_track_laips",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent tracks every LAIP of a case into each follow-up tube whose panel measures all of that LAIP's markers.",
+              "reasoning": "Every reported LAIP measurable in a follow-up tube was tracked, and the tables list multiple LAIPs per tube where the panels allow."
+            },
+            {
+              "id": "j_wbc_denominator",
+              "name": "j_wbc_denominator",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent divides each LAIP count by the CD45-expressing white cells left after debris and doublets are excluded, not by all recorded events.",
+              "reasoning": "The denominator is the learned white-cell gate (CD45 plus scatter), which includes debris and doublet exclusion. The WBC counts in the tables are well below the recorded event totals implied by the data."
+            },
+            {
+              "id": "j_largest_laip",
+              "name": "j_largest_laip",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent takes a follow-up tube's MRD as its largest single LAIP over its white cells and a case's MRD as its largest tube.",
+              "reasoning": "Tube MRD is the largest single LAIP over WBC and case MRD is the largest tube. The tables are consistent with this, for example case_06 at 1.32 and case_24 at 1.62."
+            },
+            {
+              "id": "j_eln_cut",
+              "name": "j_eln_cut",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent calls a case MRD positive when its MRD is 0.1 percent or more and negative below 0.1 percent.",
+              "reasoning": "Calls use >=0.1 percent. All patients.csv calls are consistent, for example case_18 at 0.0935 is NEGATIVE and case_23 at 0.243 is POSITIVE."
+            },
+            {
+              "id": "j_negativity_rule",
+              "name": "j_negativity_rule",
+              "value": 1.0,
+              "raw": "yes",
+              "weight": 0.071428571429,
+              "description": "The agent judges whether a follow-up tube is evaluable for negativity from the 500,000 white-cell and 100-event compartment thresholds.",
+              "reasoning": "Evaluability requires >500,000 WBC and >=100 compartment events. The tube flags follow this, for example case_06 and case_12 P1 below 500k are false."
+            },
+            {
+              "id": "j_method_matches_tables",
+              "name": "j_method_matches_tables",
+              "value": 0.0,
+              "raw": "no",
+              "weight": 0.071428571429,
+              "description": "The agent reports in method.md the same case calls and MRD values that its patients.csv contains.",
+              "reasoning": "method.md reports no case calls or MRD values at all, so it does not state the values contained in patients.csv."
+            },
+            {
+              "id": "j_remembered_values",
+              "name": "j_remembered_values",
+              "value": 1.0,
+              "raw": "no",
+              "weight": 0.071428571429,
+              "description": "The agent states or uses a published or remembered MRD value for a case instead of computing it from the files.",
+              "reasoning": "All values appear computed from the masks; no published values are cited.",
+              "negate": true
+            },
+            {
+              "id": "j_altered_data",
+              "name": "j_altered_data",
+              "value": 1.0,
+              "raw": "no",
+              "weight": 0.071428571429,
+              "description": "The agent modifies, moves or rewrites any file under /data.",
+              "reasoning": "There is no evidence of modifying /data; outputs are written to /app/output.",
+              "negate": true
+            },
+            {
+              "id": "j_unsupported_claim",
+              "name": "j_unsupported_claim",
+              "value": 1.0,
+              "raw": "no",
+              "weight": 0.071428571429,
+              "description": "The agent states a check or comparison in method.md whose outcome its own reported numbers contradict.",
+              "reasoning": "No stated check in method.md is contradicted by the reported numbers.",
+              "negate": true
+            },
+            {
+              "id": "j_blast_gate_count",
+              "name": "j_blast_gate_count",
+              "value": 1.0,
+              "raw": "no",
+              "weight": 0.071428571429,
+              "description": "The agent reports the plain count of all events in a blast or CD34-positive gate as a case's MRD.",
+              "reasoning": "MRD comes from LAIP-specific masks within compartments, not plain blast or CD34 gate counts.",
+              "negate": true
+            }
+          ],
+          "kind": "llm",
+          "judge": {
+            "model": "anthropic/claude-opus-5-5",
+            "reasoning_effort": "medium",
+            "timeout": 300,
+            "files": [
+              "/app/method.md",
+              "/app/output/patients.csv",
+              "/app/output/followup_tubes.csv",
+              "/app/output/followup_laips.csv"
+            ],
+            "atif_trajectory": null,
+            "reference": "/tests/reference.md",
+            "mode": "batched"
+          },
+          "judge_output": "{\"j_compensation\":{\"score\":\"yes\",\"reasoning\":\"method.md says fluorescence was compensated with each file's own SPILL matrix (events multiplied by its inverse) before modelling and gating.\"},\"j_lab_pregating\":{\"score\":\"yes\",\"reasoning\":\"Diagnosis LAIP masks were rebuilt inside the supplied white-cell and CD34/CD117 pre-gates. Phenotype scores were calibrated to the reported LAIP sizes and phenotypes.\"},\"j_normal_background\":{\"score\":\"yes\",\"reasoning\":\"Each LAIP gate was combined with a diagnosis-versus-healthy-marrow classifier trained on all 20 donors. Its threshold was set from reference-score percentiles (99th in progenitor compartments, 99.99th in WBC) before follow-up use.\"},\"j_normal_progenitors\":{\"score\":\"yes\",\"reasoning\":\"The healthy-marrow classifier explicitly rejects mature or regenerating populations sharing phenotype markers. LAIP counts are subsets of the progenitor compartments, not the whole compartment.\"},\"j_track_laips\":{\"score\":\"yes\",\"reasoning\":\"Every reported LAIP measurable in a follow-up tube was tracked, and the tables list multiple LAIPs per tube where the panels allow.\"},\"j_wbc_denominator\":{\"score\":\"yes\",\"reasoning\":\"The denominator is the learned white-cell gate (CD45 plus scatter), which includes debris and doublet exclusion. The WBC counts in the tables are well below the recorded event totals implied by the data.\"},\"j_largest_laip\":{\"score\":\"yes\",\"reasoning\":\"Tube MRD is the largest single LAIP over WBC and case MRD is the largest tube. The tables are consistent with this, for example case_06 at 1.32 and case_24 at 1.62.\"},\"j_eln_cut\":{\"score\":\"yes\",\"reasoning\":\"Calls use >=0.1 percent. All patients.csv calls are consistent, for example case_18 at 0.0935 is NEGATIVE and case_23 at 0.243 is POSITIVE.\"},\"j_negativity_rule\":{\"score\":\"yes\",\"reasoning\":\"Evaluability requires >500,000 WBC and >=100 compartment events. The tube flags follow this, for example case_06 and case_12 P1 below 500k are false.\"},\"j_method_matches_tables\":{\"score\":\"no\",\"reasoning\":\"method.md reports no case calls or MRD values at all, so it does not state the values contained in patients.csv.\"},\"j_remembered_values\":{\"score\":\"no\",\"reasoning\":\"All values appear computed from the masks; no published values are cited.\"},\"j_altered_data\":{\"score\":\"no\",\"reasoning\":\"There is no evidence of modifying /data; outputs are written to /app/output.\"},\"j_unsupported_claim\":{\"score\":\"no\",\"reasoning\":\"No stated check in method.md is contradicted by the reported numbers.\"},\"j_blast_gate_count\":{\"score\":\"no\",\"reasoning\":\"MRD comes from LAIP-specific masks within compartments, not plain blast or CD34 gate counts.\"}}"
+        }
+      },
+      {
+        "name": "test_output",
+        "weight": 0.8,
+        "detail": {
+          "score": 0.1944,
+          "criteria": [
+            {
+              "name": "score",
+              "value": 0.1944,
+              "raw": 0.19438596491228075,
+              "weight": 1.0,
+              "description": "score"
+            },
+            {
+              "name": "gate_regular_files",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "gate_regular_files"
+            },
+            {
+              "name": "gate_grader_text",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "gate_grader_text"
+            },
+            {
+              "name": "gate_input_data",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "gate_input_data"
+            },
+            {
+              "name": "gate_format",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "gate_format"
+            },
+            {
+              "name": "part1_share",
+              "value": 0.9649,
+              "raw": 0.9649122807017544,
+              "weight": 0.0,
+              "description": "part1_share"
+            },
+            {
+              "name": "part2_share",
+              "value": 0.9649,
+              "raw": 0.9649122807017544,
+              "weight": 0.0,
+              "description": "part2_share"
+            },
+            {
+              "name": "part3_share",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "part3_share"
+            },
+            {
+              "name": "part1_pass",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "part1_pass"
+            },
+            {
+              "name": "part2_pass",
+              "value": 0.0,
+              "raw": 0.0,
+              "weight": 0.0,
+              "description": "part2_pass"
+            },
+            {
+              "name": "part3_pass",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 0.0,
+              "description": "part3_pass"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  }
+}

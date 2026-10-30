@@ -1,0 +1,30 @@
+{
+    "task": {
+        "path": "dataset/77921209-6d15-4181-8f50-1506ccadbe48"
+    },
+    "trial_name": "mrd-aml__CJdAopy",
+    "trials_dir": "trajectories/77921209-6d15-4181-8f50-1506ccadbe48",
+    "agent": {
+        "name": "codex",
+        "model_name": "openai/gpt-6.1-sol",
+        "extra_allowed_hosts": [
+            "192.168.65.254"
+        ],
+        "kwargs": {
+            "version": "0.165.0",
+            "reasoning_effort": "high",
+            "config": "codex-agent.toml",
+            "web_search": "disabled"
+        },
+        "env": {
+            "OPENAI_BASE_URL": "http://192.168.65.254:8645/v1"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "extra_docker_compose": [
+            "compose-relay.yaml"
+        ]
+    },
+    "job_id": "9796df20-530a-48dc-9c1e-0dd385a37961"
+}

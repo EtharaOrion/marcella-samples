@@ -1,0 +1,13 @@
+"""The judge input when the compiled score is below 1.0: no judge is called, and this input scores 0."""
+
+from pathlib import Path
+
+import rewardkit as rk
+
+
+@rk.criterion(description="judge not called below a full compiled score")
+def judge_not_called(workspace: Path) -> float:
+    return 0.0
+
+
+rk.judge_not_called(weight=1.0, name="judge_not_called")

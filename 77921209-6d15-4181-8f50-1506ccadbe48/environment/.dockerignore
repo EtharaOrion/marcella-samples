@@ -1,0 +1,5 @@
+*
+!requirements.lock.txt
+!data/
+!data/**
+**/.DS_Store

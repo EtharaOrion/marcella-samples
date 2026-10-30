@@ -1,0 +1,56 @@
+{
+    "schema_version": 2,
+    "task": {
+        "name": "mrd-aml",
+        "version": "1.0.0",
+        "type": "local",
+        "digest": "sha256:eaa6e6a368825c1daff54234a77ad6a5e1161cb3fc9f831827d7951e7cf80533",
+        "path": "dataset/77921209-6d15-4181-8f50-1506ccadbe48"
+    },
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "name": "codex",
+        "model_name": "openai/gpt-6.1-sol",
+        "skills": [],
+        "resume_trajectory": false,
+        "extra_allowed_hosts": [
+            "192.168.65.254"
+        ],
+        "kwargs": {
+            "version": "0.165.0",
+            "reasoning_effort": "high",
+            "config": "codex-agent.toml",
+            "web_search": "disabled"
+        },
+        "env": {
+            "OPENAI_BASE_URL": "http://192.168.65.254:8645/v1"
+        },
+        "mcp_servers": []
+    },
+    "bridge_inputs": {},
+    "skills": [],
+    "environment": {
+        "type": "docker",
+        "force_build": false,
+        "delete": true,
+        "stream": false,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "extra_docker_compose": [
+            "compose-relay.yaml"
+        ],
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "extra_docker_compose": [
+        {
+            "path": "compose-relay.yaml",
+            "digest": "sha256:36aeb1a5d76ff92e87b6fd1417bde179ec0bd2128d334dbfe6aae17f906b3e2f"
+        }
+    ],
+    "verifier": {
+        "disable": false,
+        "environment_mode": "separate"
+    }
+}

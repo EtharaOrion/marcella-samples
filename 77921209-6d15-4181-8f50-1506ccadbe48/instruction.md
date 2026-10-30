@@ -1,0 +1,43 @@
+# Measurable residual disease in acute myeloid leukaemia from bone-marrow flow cytometry
+
+A haematology laboratory has handed you the flow-cytometry files of a cohort of adults with acute myeloid leukaemia (AML), together with the laboratory's leukaemia-associated immunophenotype (LAIP) report from each diagnosis sample. For every case that has follow-up bone marrow, measure the measurable residual disease (MRD) the way the European LeukemiaNet (ELN) 2021 recommendations define it for flow cytometry, and show which cells you counted.
+
+## Data (read-only, under `/data`)
+
+- `diagnosis/case_NN/`: the diagnosis bone marrow of a case. `P1.fcs` to `P4.fcs` are the tubes the laboratory analysed (a case has one to four). `Pn.gates.csv.gz` gives, for every event of tube `Pn` in file order, the laboratory's own pre-gating as 0/1 columns: `wbc` (the laboratory's white-cell gate), `cd34pos` and `cd117pos` (CD34-positive and CD117-positive white cells) and `blast` (the blast gate). `laip_report.csv` is the laboratory's LAIP report for the case, one row per LAIP with the columns `tube`, `laip` (an identifier such as `L1`), `phenotype` (marker tokens such as `CD34+ CD13+ HLA-DR-`, where `++` means bright), `events` (the number of diagnosis events the laboratory assigned to that LAIP on that tube) and `percent_of_wbc`.
+- `followup/case_NN/`: the follow-up bone marrow of the same case after treatment, tubes `P1.fcs` to `P4.fcs`. No gating is supplied for follow-up tubes. Not every diagnosis case has a follow-up.
+- `normal/normal_NN/`: four tubes `P1.fcs` to `P4.fcs` from each of several healthy donors' bone marrow, stained with the laboratory's four standard panels, and `Pn.gates.csv.gz` with the columns `singlets`, `wbc`, `cd45dim`, `cd34pos`, `cd117pos`, `lymphocytes` and `blast`.
+
+Every FCS file is FCS 3.0 list mode with 32-bit float events. Each tube carries forward and side scatter, `Time`, and eight fluorescence channels; the marker stained in each channel is that parameter's `$PnS` keyword, and the panels share CD34, CD117, CD13, CD45 and HLA-DR. Every file carries its own compensation matrix in its `SPILL` keyword. Python 3.12 with NumPy, SciPy, pandas, scikit-learn and FlowIO is available. The environment has no network access.
+
+## Definitions the grading uses
+
+- White cells (WBC) are CD45-expressing cells after debris and doublets are excluded. The follow-up compartments are `WBC`, `CD34` (CD34-positive white cells), `CD117` (CD117-positive white cells) and `BLAST` (white cells that are CD34-positive or CD117-positive or both).
+- In each follow-up tube, track every LAIP of that case whose phenotype markers are all measured in the tube, inside one compartment of your choice per LAIP. A LAIP's follow-up events are the white cells of the tube that carry that LAIP's immunophenotype.
+- The MRD of a follow-up tube is the event count of its largest single LAIP divided by the tube's white cells, times 100. The tube's top LAIP is that LAIP; on a tie the LAIP with the lower number wins (`L1` before `L2`), and when no LAIP has an event the top LAIP is empty and the MRD is 0.
+- The MRD of a case is the largest MRD over its follow-up tubes. A case is MRD `POSITIVE` when its MRD is at or above 0.1 percent and `NEGATIVE` otherwise (ELN 2021).
+- A follow-up tube is evaluable for negativity when it holds more than 500,000 white cells and the compartment assessed for its best-tracked LAIP holds at least 100 events, where the compartment assessed is the largest compartment count among the LAIPs you tracked in that tube, or the `BLAST` compartment when you tracked none (ELN 2021).
+
+## What to write, under `/app/output`
+
+Four CSV files with exactly these header rows, case identifiers as the folder names (`case_05`), tubes as `P1` to `P4`, and LAIPs as the report's identifiers:
+
+- `diagnosis_laips.csv`: `case,laip,tube,events`, exactly one row per row of every `laip_report.csv`, where `events` is the number of diagnosis events you assigned to that LAIP on its tube.
+- `followup_laips.csv`: `case,tube,laip,compartment,compartment_events,events,percent_of_wbc`, one row per LAIP you tracked in a follow-up tube, with `compartment` one of `WBC`, `CD34`, `CD117` or `BLAST`, `compartment_events` that compartment's event count in the tube, `events` the LAIP's event count, and `percent_of_wbc` equal to 100 times `events` over the tube's white cells.
+- `followup_tubes.csv`: `case,tube,wbc_events,mrd_percent,top_laip,negativity_evaluable`, exactly one row per follow-up tube, with `negativity_evaluable` written `true` or `false`.
+- `patients.csv`: `case,mrd_percent,call`, exactly one row per case with follow-up, with `call` written `POSITIVE` or `NEGATIVE`.
+
+Event masks as NumPy `.npz` files (written with `numpy.savez` or `numpy.savez_compressed`), each array a 0/1 or boolean vector over every event of its tube in file order:
+
+- `masks/diagnosis/<case>_<tube>.npz` for every diagnosis tube, holding one array per LAIP the report places on that tube, named by the LAIP identifier.
+- `masks/followup/<case>_<tube>.npz` for every follow-up tube, holding the arrays `wbc`, `cd34` and `cd117` (your white-cell, CD34-positive and CD117-positive white-cell gates) and one array per LAIP row you wrote for that tube. Every other array of a follow-up tube must lie inside its `wbc` array.
+
+Also write `/app/method.md`, a short plain-text account of how you obtained the gates and counts. Report full floating-point values; do not round.
+
+## Acceptance tolerances
+
+The score is 0 unless every file above exists with its exact columns and rows, every mask has the right length and holds only 0/1 values, `/data` is unchanged, and no output file carries text addressed to a grader. Beyond that gate there are three parts:
+
+1. Diagnosis gates: each graded diagnosis LAIP mask is compared with the laboratory's own cells for that LAIP; a LAIP counts when the F1 overlap is at least 0.8, and the part passes when at least 90 percent of the graded LAIPs count.
+2. Clinical answer: every case whose MRD status the experts can determine must get the experts' call, and every such positive case must report an MRD within a factor of 5 of the experts' value. For a case whose expert MRD lies close to the cut-off either call is accepted, but its MRD must not exceed 1.0 percent. The follow-up white-cell count must lie within 20 percent of the experts' white-cell count in at least 90 percent of the follow-up tubes.
+3. Consistency: every number in your tables is recomputed from your own masks with the definitions above (relative tolerance 1e-6); this part passes only when every check holds.
