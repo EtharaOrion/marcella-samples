@@ -42,7 +42,7 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 | --- | --- | --- |
 | `77921209-6d15-4181-8f50-1506ccadbe48` | `f24cb9ab1a14` | [HOLD](VERDICT.md) |
 
-The CRUCIBLE audit found the rollout `mrd-aml__CJdAopy` a valid reasoning failure with no reward hacking. It retained four findings, none of which caps the bundle, and asks for the fixes to land under a new uuid that supersedes this one.
+The CRUCIBLE audit found the rollout `mrd-aml__CJdAopy` a valid reasoning failure with no reward hacking. It retained three findings, none of which caps the bundle, and asks for the fixes to land under a new uuid that supersedes this one.
 
 ## Coverage
 

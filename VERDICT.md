@@ -4,7 +4,6 @@ CRUCIBLE report for run `crucible-chirayu-gaur-ethara-ai-20261022t061836z-c6c2b4
 
 ## Executive summary
 
-- 🟡 Judged item `j_method_matches_tables` expects case calls and MRD values in method.md, but instruction.md asks only for an account of the gates and counts (G-STMT-RECONCILE).
 - 🟡 The six credited cases are defined as "close to the cut-off". `grading.json` lists them without their expert MRD values or the band that defines "close", so their membership cannot be checked from shipped files. One of this rollout's two failed Part 2 units, the case_24 ceiling, rests on that list (G-KEY-PROVENANCE).
 - 🟢 The data recipe wrote the FCS files with FlowIO 1.4.0, while the agent image ships 1.3.0. The rollout read every tube under 1.3.0 without error (G-ENV-PIN).
 - 🟢 The `solution/oracle.py` docstring says it writes `tubes.csv` and `laips.csv`, but the code writes only the four required tables and the masks (G-ORACLE-DOC).
@@ -25,7 +24,6 @@ HOLD
 
 ### Statement and grader integrity (class 18)
 
-- 🟡 G-STMT-RECONCILE, retained: `judge.toml` `j_method_matches_tables` and `reference.md` expect method.md to state every case call and MRD value, but `instruction.md` line 35 asks only for "a short plain-text account of how you obtained the gates and counts". Neither rollout's method.md lists the values, and the forced judge scored this item "no". The compiled grader is unaffected; the item can cost at most 0.2 / 14 ≈ 0.014 of the live reward.
 - 🟢 G-ORACLE-DOC, retained: `solution/oracle.py` line 12 says the oracle writes `tubes.csv, laips.csv, the four tables and the event masks`. The code writes `diagnosis_laips.csv`, `followup_tubes.csv`, `followup_laips.csv`, `patients.csv` and the masks, so the first two names are stale. Behaviour is unaffected.
 - ✅ G-STMT-LITERAL, acknowledged clean: every rule in the instruction matches `test_output.py`:
   - white-cell denominator; largest single LAIP per tube, ties to the lower number; largest tube per case;
@@ -86,7 +84,6 @@ HOLD
 ## Escalations
 
 - **Fixes under a new uuid superseding the audited bundle:**
-  - reword `j_method_matches_tables` to "states no call or MRD value that contradicts patients.csv";
   - add the credited band and the six credited expert MRD values to `grading.json`, and have `recompute.py` check them;
   - correct the `oracle.py` docstring;
   - note in `grounding.yaml` that the files are written with FlowIO 1.4.0 and read with 1.3.0.
