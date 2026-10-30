@@ -6,7 +6,6 @@ CRUCIBLE report for run `crucible-chirayu-gaur-ethara-ai-20261022t061836z-c6c2b4
 
 - 🟡 Judged item `j_method_matches_tables` expects case calls and MRD values in method.md, but instruction.md asks only for an account of the gates and counts (G-STMT-RECONCILE).
 - 🟡 The six credited cases are defined as "close to the cut-off". `grading.json` lists them without their expert MRD values or the band that defines "close", so their membership cannot be checked from shipped files. One of this rollout's two failed Part 2 units, the case_24 ceiling, rests on that list (G-KEY-PROVENANCE).
-- 🟡 The trial folder carries two rewards: the task-defined 0.1944 and 0.3412 from a forced diagnostic judge call that `test.sh` does not make below a compiled score of 1.0 (G-REWARD-PROVENANCE).
 - 🟢 The data recipe wrote the FCS files with FlowIO 1.4.0, while the agent image ships 1.3.0. The rollout read every tube under 1.3.0 without error (G-ENV-PIN).
 - 🟢 The `solution/oracle.py` docstring says it writes `tubes.csv` and `laips.csv`, but the code writes only the four required tables and the masks (G-ORACLE-DOC).
 - ✅ Rollout `CJdAopy` is a valid reasoning failure with no reward hacking. The shipped grader recomputes 0.19438596 from its artifacts, `/data` matches all 315 shipped digests, and no tool call touches `/tests`, the key, `/solution`, `/logs` or the network. The failure is the task's intended trap: a follow-up CD34 gate admitted normal maturing myeloid cells as leukaemic cells, so case_23 was called POSITIVE at 0.2434% against an expert value of 0.0027%.
@@ -39,7 +38,7 @@ HOLD
 ### Domain integrity and reward provenance (class 6)
 
 - 🟡 G-KEY-PROVENANCE, retained: `instruction.md` defines a credited case as one "whose expert MRD lies close to the cut-off". `grading.json`, `TRUTH.md` and `grounding.yaml` list case_11, case_12, case_17, case_24, case_27 and case_28 with the 1.0% ceiling, but carry neither their expert MRD values nor the band that defines "close". `recompute.py` checks the expert values of determinable cases only, so the credited list cannot be re-derived from shipped files.
-- 🟡 G-REWARD-PROVENANCE, retained: `verifier/` records 0.1944 (`RUBRIC_MODE=control`, compiled score only). `verifier-live-opus-5-5/` records 0.3412 = 0.8 × 0.1944 + 0.2 × 0.9286, from a judge call its `run.log` marks as forced. In live mode `test.sh` calls the judge only at a compiled score of 1.0, so the task-defined live reward is 0.8 × 0.1944 = 0.1555.
+
 - ✅ G-JUDGE-EVIDENCE, acknowledged clean: `test.sh` calls the judge only at a compiled score of 1.0, so judged items cannot lift a failing submission. The forced diagnostic judge passed `j_normal_progenitors` on method.md wording that the run's own tables contradict:
   - the refinement step removed 4.8% of case_24 P2 L2 candidates and 0.7% of P3 L3 candidates;
   - `followup_laips.csv` counts 55.6% and 76.1% of those CD34 compartments as LAIP.

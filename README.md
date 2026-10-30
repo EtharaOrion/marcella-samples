@@ -40,9 +40,9 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 
 | Bundle | Seal | Verdict |
 | --- | --- | --- |
-| `77921209-6d15-4181-8f50-1506ccadbe48` | `f24cb9ab1a14` | [HOLD](77921209-6d15-4181-8f50-1506ccadbe48/VERDICT.md) |
+| `77921209-6d15-4181-8f50-1506ccadbe48` | `f24cb9ab1a14` | [HOLD](VERDICT.md) |
 
-The CRUCIBLE audit found the rollout `mrd-aml__CJdAopy` a valid reasoning failure with no reward hacking. It retained five findings, none of which caps the bundle, and asks for the fixes to land under a new uuid that supersedes this one.
+The CRUCIBLE audit found the rollout `mrd-aml__CJdAopy` a valid reasoning failure with no reward hacking. It retained four findings, none of which caps the bundle, and asks for the fixes to land under a new uuid that supersedes this one.
 
 ## Coverage
 
@@ -56,7 +56,6 @@ One bundle is resident, at the repository root. Its 160 FCS files (about 6 GB) a
 .
 ├── .gitattributes                         *.fcs tracked with Git LFS
 ├── 77921209-6d15-4181-8f50-1506ccadbe48/
-│   ├── VERDICT.md                         audit report at the sealed digest
 │   ├── task.toml                          runner manifest
 │   ├── instruction.md                     objective
 │   ├── environment/                       sandbox image and data/ (315 files)
@@ -64,7 +63,8 @@ One bundle is resident, at the repository root. Its 160 FCS files (about 6 GB) a
 │   ├── tests/                             verifier and grading key
 │   └── trajectories/gpt-6.1-sol/run_1/    recorded rollout
 ├── images/
-└── README.md
+├── README.md
+└── VERDICT.md                             audit report at the sealed digest
 ```
 
 ```mermaid
@@ -78,7 +78,7 @@ flowchart LR
 
 ## Verification and quality assurance
 
-Each bundle carries its own verifier in `tests/`. `test.sh` grades with Harbor Reward Kit in a separate verifier container, behind an integrity gate that checks `/data` against the shipped digests of all 315 data files. The audit outcome at the sealed digest is the bundle's `VERDICT.md`.
+Each bundle carries its own verifier in `tests/`. `test.sh` grades with Harbor Reward Kit in a separate verifier container, behind an integrity gate that checks `/data` against the shipped digests of all 315 data files. The audit outcome at the sealed digest is in the root `VERDICT.md`.
 
 ## Reproduction
 
