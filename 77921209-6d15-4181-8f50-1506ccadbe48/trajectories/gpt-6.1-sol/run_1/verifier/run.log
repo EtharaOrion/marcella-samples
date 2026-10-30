@@ -1,3 +1,0 @@
-judge forced: tests/test.sh live mode skips the judge when pytest < 1.0; here the full rubric (/tests) runs regardless, final = 0.80 x pytest + 0.20 x judge
-reward: 0.1944
-reward: 0.3412
